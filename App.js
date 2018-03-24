@@ -1,12 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { MapView } from 'expo';
+import { MapView, Location } from 'expo';
 
 export default class App extends React.Component {
+
+  componentWillMount(){
+    Location.setApiKey("AIzaSyDgoaHkdwS4_OVB3hnh6OgKLqDp-AiWxV8");
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <MapView style={{height: '100%', width: '100%'}}/>
+        <MapView style={{height: '100%', width: '100%'}} showsUserLocation={true}/>
       </View>
     );
   }
