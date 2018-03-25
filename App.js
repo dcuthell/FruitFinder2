@@ -4,6 +4,8 @@ import { Location } from 'expo';
 import MapView from 'react-native-map-clustering';
 import { Marker } from 'react-native-maps';
 
+import RootApp from './src/RootApp';
+
 export default class App extends React.Component {
 
   componentWillMount(){
@@ -14,17 +16,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <MapView style={{height: '100%', width: '100%'}}
-        showsUserLocation={true}
-        region={{
-          latitude: 45.51,
-          longitude: -122.68,
-          latitudeDelta: .2,
-          longitudeDelta: .2,
-        }}>
-          <Marker coordinate={{longitude: -122.68, latitude: 45.51}} />
-          <Marker coordinate={{longitude: -122.66, latitude: 45.49}} />
-        </MapView>
+        <RootApp/>
       </View>
     );
   }
