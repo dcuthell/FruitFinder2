@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Dimensions, Text } from 'react-native';
 import { Location } from 'expo';
 import MapView from 'react-native-map-clustering';
 import { Marker } from 'react-native-maps';
@@ -14,10 +14,13 @@ export default class App extends React.Component {
   }
 
   render() {
+
+    const {height, width} = Dimensions.get('window');
+
     return (
       <View style={styles.container}>
         <MapView
-          style={{height: '100%', width: '100%'}}
+          style={{height: height, width: width, flex: 1}}
           showsUserLocation={true}
           region={{
             latitude: 45.51,

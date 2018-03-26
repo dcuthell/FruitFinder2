@@ -1,3 +1,5 @@
 export default {
-  MapScreen: 'MapScreen',
+  MapScreen: "Map View",
+  Home: "Home",
+  Another: "Another"
 };
