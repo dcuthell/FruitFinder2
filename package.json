@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "expo": "^25.0.0",
+    "immutable": "^3.8.2",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-map-clustering": "^1.3.0",
