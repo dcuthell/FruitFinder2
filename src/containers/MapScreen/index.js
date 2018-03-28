@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Dimensions, Text } from 'react-native';
-import { Location } from 'expo';
 import MapView from 'react-native-map-clustering';
 import { Marker } from 'react-native-maps';
 import PropTypes from 'prop-types';
@@ -12,11 +11,6 @@ import getViewCoords from '../../selectors/viewCoords';
 import styles from './styles'
 
 export class MapScreen extends React.Component {
-
-  componentWillMount(){
-    //Needed?
-    Location.setApiKey("AIzaSyDgoaHkdwS4_OVB3hnh6OgKLqDp-AiWxV8");
-  }
 
   render() {
 

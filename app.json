@@ -4,13 +4,15 @@
     "icon": "./tree.png",
     "version": "1.0.0",
     "sdkVersion": "25.0.0",
-    "android" : {
+    "android": {
       "package": "com.grailsoft.fruitfinder",
-      "config" : {
+      "config": {
         "googleMaps": {
-          "apiKey" : "AIzaSyDgoaHkdwS4_OVB3hnh6OgKLqDp-AiWxV8"
+          "apiKey": "AIzaSyDgoaHkdwS4_OVB3hnh6OgKLqDp-AiWxV8"
         }
       }
     }
-  }
+  },
+  "name": "FruitFinder",
+  "displayName": "FruitFinder"
 }
