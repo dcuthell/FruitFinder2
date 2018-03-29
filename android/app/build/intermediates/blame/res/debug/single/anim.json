@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
-    },
-    {
         "merged": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
         "source": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
         "merged": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",

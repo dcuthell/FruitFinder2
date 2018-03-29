@@ -3,30 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_a7554237c4b78a8e96f5d0b54435c0fb5f779002.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_36189eb4e86f5e8dd6a8517e4bfcaab229bc8f1c.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
         <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_5c9f84a4b8911f3c10b4aeead638805cb5fcc35c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\FruitFinder\react-native-maps\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="634269d826283e4221210b70e7ebcb44b6e7d918">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\FruitFinder-react-native-maps-unspecified_ee87e08e98bb5bb7c89e8362e572641811e5d9db.jar" />
     </item>
     <item
         is-multidex="false"
@@ -39,15 +30,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dcc3t\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_72155581cc9d6953034defc3bad49f1a0d7ae769.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\dcc3t\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
         jumboMode="false"
         optimize="true"
@@ -57,12 +39,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
+        jar="C:\Users\dcc3t\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_a6cd46645ba41c613fdd1cbf5e47f90ec0acd77b.jar" />
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\support-annotations-24.0.0_d4aafa3b20fb0ad834a0650ef940bc60f088df7f.jar" />
     </item>
     <item
         is-multidex="false"
@@ -84,15 +66,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dcc3t\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.6.0\3f9b16b774f2c36cfd86dd2053d0b3059531dacc\okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_20ff8b68ad09d733b23531a38747f06d96752def.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\dcc3t\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
@@ -102,30 +75,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dcc3t\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.4\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1_520057d6e96fb27a8e0148b75a8e762a67a93a38.jar" />
+        sha1="9ed08fab37c3a572da1d9ed2bf2e36c8d3e2bc48">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-10.2.4_198c55e4f0b368d1a98ee819485c422aea8a3f11.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_339b8c84b51f7e1453b3cf8dd0415ef74a04001b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.52.0\jars\libs\infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_da5de698c68a741e0336234ad2fcd4e8d4683d9b.jar" />
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0_901e268b15ee18e277b30e168d8ee652cbece34e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -156,6 +120,87 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_a7554237c4b78a8e96f5d0b54435c0fb5f779002.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_36189eb4e86f5e8dd6a8517e4bfcaab229bc8f1c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.2.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5803db663655ef5cb38c6bcb17ba326fdb9edfbd">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-10.2.4_10ac20a77e09e384c00a3f3f49f26c2849dcb60e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dd1d0d84da2cff18f741c63a9c3af7d9aa89fdd6">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-10.2.4_388814848eb1cdf5af95f00011a88d9e76451fb5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcc3t\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_72155581cc9d6953034defc3bad49f1a0d7ae769.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_a6cd46645ba41c613fdd1cbf5e47f90ec0acd77b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0_4a033a090bd47155daca42959fbcefea5a75b947.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcc3t\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.6.0\3f9b16b774f2c36cfd86dd2053d0b3059531dacc\okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_20ff8b68ad09d733b23531a38747f06d96752def.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.52.0\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_da5de698c68a741e0336234ad2fcd4e8d4683d9b.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\dcc3t\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
@@ -174,12 +219,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jar="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\10.2.4\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_f2577c76ca7823f0a88d5b5f449c114bbfa8bf16.jar" />
+        sha1="6d0d5e86f5b7203834df01ed78ebfdd5cbf74d48">
+        <dex dex="C:\Users\dcc3t\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-10.2.4_5813eaf44614c047c4ba480fa7124073d1312a57.jar" />
     </item>
     <item
         is-multidex="false"
