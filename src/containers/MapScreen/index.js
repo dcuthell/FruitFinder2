@@ -22,6 +22,8 @@ export class MapScreen extends React.Component {
           style={{height: height, width: width, flex: 1}}
           showsUserLocation={true}
           region={this.props.viewCoords}>
+          <Marker coordinate={{longitude: -122.681, latitude: 45.511}} />
+          <Marker coordinate={{longitude: -122.68, latitude: 45.51}} />
         </MapView>
       </View>
     );
