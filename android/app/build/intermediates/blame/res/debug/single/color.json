@@ -13,7 +13,7 @@
     },
     {
         "merged": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\color\\common_google_signin_btn_text_dark.xml"
+        "source": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.8.0\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
@@ -41,10 +41,10 @@
     },
     {
         "merged": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\color\\common_google_signin_btn_text_light.xml"
+        "source": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.8.0\\res\\color\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_tint.xml",
-        "source": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\color\\common_google_signin_btn_tint.xml"
+        "source": "C:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.8.0\\res\\color\\common_google_signin_btn_tint.xml"
     }
 ]

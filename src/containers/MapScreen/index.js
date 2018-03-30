@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Dimensions, Text } from 'react-native';
 import MapView from 'react-native-map-clustering';
+import ClusteredMapView from 'react-native-maps-super-cluster'
 import { Marker } from 'react-native-maps';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';

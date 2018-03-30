@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "725116089617",
+    "firebase_url": "https://mobilefruitfinde-1510358280368.firebaseio.com",
+    "project_id": "mobilefruitfinde-1510358280368",
+    "storage_bucket": "mobilefruitfinde-1510358280368.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725116089617:android:73ae81dd9e13653f",
+        "android_client_info": {
+          "package_name": "com.fruitfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725116089617-ns8i983qppibs0mfnos2cvi7oq4nf0hd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4pyB7mJuXN19TH0okCszjqphTgQO3X5c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
