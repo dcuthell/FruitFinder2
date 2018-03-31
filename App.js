@@ -18,6 +18,14 @@ export default class App extends React.Component {
     });
 
 
+    let response = firebase.database().ref("/6081").once('value').then(result => console.log(result.toJSON()));
+    if(!response){
+      console.log("fail");
+    }else{
+      console.log(response);
+    }
+
+
     return (
       <RootApp/>
     );

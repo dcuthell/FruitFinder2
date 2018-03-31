@@ -75,6 +75,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1b982cc8b5ab6f788690238dbe3ac3bb19f88b1a">
+        <dex dex="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-11.8.0_c3264885bcb440d1845b78e752be225d008fd201.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.52.0\jars\libs\infer-annotations-4.0.jar"
         jumboMode="false"
         optimize="true"
@@ -198,6 +207,15 @@
         revision="23.0.1"
         sha1="f162442a19fff13995fbd51ba414d9ee05579080">
         <dex dex="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_1b65162de7a0416905701ef255800a25a5055873.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ed04a0ae7198b0d5d0e965d6afdb0fe784dcfbee">
+        <dex dex="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-connection-11.8.0_5d8b626cbc2cab9e8c09915a6792ab3637b93aad.jar" />
     </item>
     <item
         is-multidex="false"

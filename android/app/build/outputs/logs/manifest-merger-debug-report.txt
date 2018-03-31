@@ -60,6 +60,10 @@ MERGED from [com.google.android.gms:play-services-maps-license:11.8.0] C:\Users\
 MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\11.8.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.8.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base-license\11.8.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-license\11.8.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\11.8.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database-connection:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\11.8.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection-license\11.8.0\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\11.8.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common-license\11.8.0\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.8.0\AndroidManifest.xml:5:5-44
@@ -72,7 +76,7 @@ MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\dcuthell\De
 MERGED from [com.android.support:support-compat:25.2.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\AndroidManifest.xml:21:5-23:58
 MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement-license\11.8.0\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks-license\11.8.0\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-license\11.8.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-license\11.8.0\AndroidManifest.xml:4:5-43
 	tools:overrideLibrary
 		ADDED from [com.android.support:support-v4:25.2.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
@@ -101,6 +105,8 @@ MERGED from [com.google.android.gms:play-services-maps-license:11.8.0] C:\Users\
 MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\11.8.0\AndroidManifest.xml:22:5-30:19
 MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.8.0\AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base-license\11.8.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-license\11.8.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection-license\11.8.0\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\11.8.0\AndroidManifest.xml:7:5-13:19
 MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common-license\11.8.0\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.8.0\AndroidManifest.xml:7:5-20
@@ -113,7 +119,7 @@ MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\dcuthell\De
 MERGED from [com.android.support:support-compat:25.2.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement-license\11.8.0\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks-license\11.8.0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-license\11.8.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-license\11.8.0\AndroidManifest.xml:5:5-20
 	android:label
 		ADDED from C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\src\main\AndroidManifest.xml:17:7-39
 	android:allowBackup
