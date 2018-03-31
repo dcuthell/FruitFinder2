@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Dimensions, Text } from 'react-native';
-import { Marker, MapView } from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -17,7 +17,13 @@ class MapScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Text>Hello</Text>
+        <MapView
+          style={{height: height, width: width, flex: 1}}
+          showsUserLocation={true}
+          region={this.props.viewCoords}>
+          <Marker coordinate={{longitude: -122.68, latitude: 45.51}}/>
+          <Marker coordinate={{longitude: -122.69, latitude: 45.52}}/>
+        </MapView>
       </View>
     );
   }
