@@ -255,6 +255,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c5bc72ad3250d065128d1d7514279be703e57bd0">
+        <dex dex="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-11.8.0_82f2b80f69f56c5f19cd9b647021d2d364ceffdd.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"

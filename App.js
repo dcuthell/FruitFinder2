@@ -9,7 +9,14 @@ export default class App extends React.Component {
 
   render() {
 
-    
+    firebase.auth()
+    .signInAnonymouslyAndRetrieveData()
+    .then(credential => {
+      if (credential) {
+        console.log('default app user ->', credential.user.toJSON());
+      }
+    });
+
 
     return (
       <RootApp/>
