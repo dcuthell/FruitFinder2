@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, Dimensions, Text } from 'react-native';
-import MapView from 'react-native-map-clustering';
-import ClusteredMapView from 'react-native-maps-super-cluster'
-import { Marker } from 'react-native-maps';
+import { Marker, MapView } from 'react-native-maps';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -11,7 +9,7 @@ import ActionCreators from '../../actions/index'
 import getViewCoords from '../../selectors/viewCoords';
 import styles from './styles'
 
-export class MapScreen extends React.Component {
+class MapScreen extends React.Component {
 
   render() {
 
@@ -19,13 +17,7 @@ export class MapScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-        <MapView
-          style={{height: height, width: width, flex: 1}}
-          showsUserLocation={true}
-          region={this.props.viewCoords}>
-          <Marker coordinate={{longitude: -122.681, latitude: 45.511}} />
-          <Marker coordinate={{longitude: -122.68, latitude: 45.51}} />
-        </MapView>
+        <Text>Hello</Text>
       </View>
     );
   }
