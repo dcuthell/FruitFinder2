@@ -4,6 +4,7 @@ import MapView, { Marker } from 'react-native-maps';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import ClusteredMapView from 'react-native-maps-super-cluster'
 
 import ActionCreators from '../../actions/index'
 import getViewCoords from '../../selectors/viewCoords';
