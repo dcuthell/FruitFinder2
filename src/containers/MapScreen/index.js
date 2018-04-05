@@ -11,14 +11,43 @@ import getViewCoords from '../../selectors/viewCoords';
 import styles from './styles'
 
 const INIT_REGION = {
-  latitude: 41.8962667,
-  longitude: 11.3340056,
-  latitudeDelta: 12,
-  longitudeDelta: 12
+  latitude: 45.51,
+  longitude: -122.68,
+  latitudeDelta: .05,
+  longitudeDelta: .05
 }
 
 
 class MapScreen extends React.Component {
+
+  constructor(props){
+    super(props)
+
+    this.state = {
+      pins: [
+        { id: 0,
+          location: {
+            longitude: -122.68,
+            latitude: 45.51
+          }
+        },
+        { id: 1,
+          location: {
+            longitude: -122.681,
+            latitude: 45.511
+          }
+        },
+        { id: 2,
+          location: {
+            longitude: -122.682,
+            latitude: 45.512
+          }
+        }
+      ]
+    }
+    this.renderMarker = this.renderMarker.bind(this)
+    this.renderCluster = this.renderCluster.bind(this)
+  }
 
   renderCluster = (cluster, onPress) => {
     const pointCount = cluster.pointCount,
@@ -31,38 +60,25 @@ class MapScreen extends React.Component {
     // eventually get clustered points by using
     // underlying SuperCluster instance
     // Methods ref: https://github.com/mapbox/supercluster
-    const clusteringEngine = this.map.getClusteringEngine(),
-          clusteredPoints = clusteringEngine.getLeaves(clusterId, 100)
+    // const clusteringEngine = this.map.getClusteringEngine(),
+    //       clusteredPoints = clusteringEngine.getLeaves(clusterId, 100)
 
     return (
-      <Marker coordinate={coordinate} onPress={onPress}>
-        <View style={styles.myClusterStyle}>
-          <Text style={styles.myClusterTextStyle}>
+      <Marker identifier={`cluster-${clusterId}`} coordinate={coordinate} onPress={onPress}>
+        <View style={styles.clusterContainer}>
+          <Text style={styles.clusterText}>
             {pointCount}
           </Text>
         </View>
-        {
-          /*
-            Eventually use <Callout /> to
-            show clustered point thumbs, i.e.:
-            <Callout>
-              <ScrollView>
-                {
-                  clusteredPoints.map(p => (
-                    <Image source={p.image}>
-                  ))
-                }
-              </ScrollView>
-            </Callout>
-
-            IMPORTANT: be aware that Marker's onPress event isn't really consistent when using Callout.
-           */
-        }
       </Marker>
     )
   }
 
-  renderMarker = (data) => <Marker key={data.id || Math.random()} coordinate={data.location} />
+  renderMarker = (pin) => {
+    return (
+      <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} />
+    )
+  }
 
   render() {
 
@@ -71,9 +87,9 @@ class MapScreen extends React.Component {
     return (
       <ClusteredMapView
           style={{flex: 1}}
-          data={this.state.data}
+          data={this.state.pins}
           initialRegion={INIT_REGION}
-          ref={(r) => { this.map = r }}
+          radius={ 40 }
           renderMarker={this.renderMarker}
           renderCluster={this.renderCluster} />
     );
