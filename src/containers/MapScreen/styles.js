@@ -10,19 +10,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   clusterContainer: {
-    width: 120,
-    height: 120,
-    padding: 6,
+    width: 128,
+    height: 128,
+    padding: 16,
     borderWidth: 32,
-    borderRadius: 60,
+    borderRadius: 64,
     alignItems: 'center',
     borderColor: '#65bc46',
     justifyContent: 'center',
     // backgroundColor: 'white',
   },
   clusterImage: {
-    height: 120,
-    width: 120
+    height: 128,
+    width: 128
   },
   clusterText: {
     fontSize: 48,

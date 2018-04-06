@@ -84,7 +84,7 @@ class MapScreen extends React.Component {
     return (
       <Marker identifier={`cluster-${clusterId}`} coordinate={coordinate} onPress={onPress}>
         <View style={styles.clusterContainer}>
-          <ImageBackground source={require('./tree.png')} style={styles.clusterImage}>
+          <ImageBackground source={require('../images/tree128.png')} style={styles.clusterImage}>
             <Text style={styles.clusterText}>
               {pointCount}
             </Text>
@@ -96,7 +96,7 @@ class MapScreen extends React.Component {
 
   renderMarker = (pin) => {
     return (
-      <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} />
+      <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} image={require('../images/tree128.png')} />
     )
   }
 
