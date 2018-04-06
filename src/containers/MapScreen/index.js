@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Dimensions, Text, ImageBackground } from 'react-native';
+import { View, Dimensions, Text, ImageBackground, Button } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
@@ -68,10 +68,8 @@ class MapScreen extends React.Component {
     this.renderCluster = this.renderCluster.bind(this)
   }
 
-  async componentWillMount(){
-    await this.props.fetchTreeList();
-    console.log("yo, i fetched");
-    console.log(this.props);
+  componentWillMount(){
+    this.props.fetchTreeList();
   }
 
   renderCluster = (cluster, onPress) => {
@@ -109,22 +107,35 @@ class MapScreen extends React.Component {
 
   render() {
 
+    console.log(this.props);
     const {height, width} = Dimensions.get('window');
 
     return (
-      <ClusteredMapView
-          style={{flex: 1}}
-          data={this.state.pins}
-          initialRegion={INIT_REGION}
-          radius={ 90 }
-          renderMarker={this.renderMarker}
-          renderCluster={this.renderCluster} />
+      <View style={{height: '100%', width: '100%'}}>
+        <ClusteredMapView
+            style={{flex: 1}}
+            data={this.state.pins}
+            initialRegion={INIT_REGION}
+            radius={ 90 }
+            renderMarker={this.renderMarker}
+            renderCluster={this.renderCluster} />
+        <Button
+          title={"Hey"}
+          type={'standard'}
+          onPress={() => {
+            this.props.fetchTreeList();
+            console.log(this.props);
+            console.log("heryryery");
+          }}
+        />
+      </View>
+
     );
   }
 }
 
 MapScreen.defaultProps = {
-  markers: [],
+  markers: {},
   viewCoords: {
     latitude: 45.5231,
     longitude: -132.68,
@@ -136,7 +147,7 @@ MapScreen.defaultProps = {
 };
 
 MapScreen.propTypes = {
-  // markers: PropTypes.array,
+  markers: PropTypes.object,
   viewCoords: PropTypes.object,
   setViewCoords: PropTypes.func,
   getTreeList: PropTypes.func,

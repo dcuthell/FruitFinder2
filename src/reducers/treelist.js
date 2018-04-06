@@ -4,12 +4,12 @@ import createReducer from '../lib/helpers/createReducer';
 import { SET_TREE_LIST } from '../lib/constants/actions';
 
 
-const defaultState = Map().set('treeList', []);
+const defaultState = Map().set('treeList', {key: 6969});
 
 export default createReducer(defaultState, {
 
   [SET_TREE_LIST](state, action) {
-    return state.set('treeList', [ ...state, action.payload ]);
+    return state.set('treeList', action.payload);
   },
 
 });
