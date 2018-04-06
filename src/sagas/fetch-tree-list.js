@@ -7,7 +7,7 @@ import setTreeList from '../actions/set-tree-list';
 
 function* fetchTreeList() {
   try {
-    const response = yield firebase.database().ref("/6081").once('value');
+    const response = yield firebase.database().ref().once('value');
     const treeList = yield response.json();
     yield put(setTreeList(treeList));
   } catch (error) {

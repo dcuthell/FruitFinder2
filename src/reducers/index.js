@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
 
 import viewCoords from './viewCoords';
-export const reducers = {viewCoords};
+import treeList from './treeList';
+export const reducers = { viewCoords, treeList };
 
 export default function getRootReducer(navReducer) {
   return combineReducers({
