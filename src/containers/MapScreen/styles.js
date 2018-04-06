@@ -10,25 +10,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   clusterContainer: {
-    width: 40,
-    height: 40,
+    width: 120,
+    height: 120,
     padding: 6,
-    borderWidth: 1,
-    borderRadius: 20,
+    borderWidth: 32,
+    borderRadius: 60,
     alignItems: 'center',
     borderColor: '#65bc46',
     justifyContent: 'center',
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
   },
   clusterImage: {
-    height: 30,
-    width: 30
+    height: 120,
+    width: 120
   },
   clusterText: {
-    fontSize: 17,
+    fontSize: 48,
     color: '#f142f4',
     fontWeight: '500',
     textAlign: 'center',
+    paddingTop: 20
   },
 });
 

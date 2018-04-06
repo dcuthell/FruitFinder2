@@ -42,6 +42,24 @@ class MapScreen extends React.Component {
             longitude: -122.682,
             latitude: 45.512
           }
+        },
+        { id: 3,
+          location: {
+            longitude: -122.679,
+            latitude: 45.509
+          }
+        },
+        { id: 4,
+          location: {
+            longitude: -122.678,
+            latitude: 45.508
+          }
+        },
+        { id: 5,
+          location: {
+            longitude: -122.677,
+            latitude: 45.507
+          }
         }
       ]
     }
@@ -91,7 +109,7 @@ class MapScreen extends React.Component {
           style={{flex: 1}}
           data={this.state.pins}
           initialRegion={INIT_REGION}
-          radius={ 40 }
+          radius={ 90 }
           renderMarker={this.renderMarker}
           renderCluster={this.renderCluster} />
     );
