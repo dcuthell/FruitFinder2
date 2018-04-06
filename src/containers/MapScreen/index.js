@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Dimensions, Text } from 'react-native';
+import { View, Dimensions, Text, ImageBackground } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
@@ -66,9 +66,11 @@ class MapScreen extends React.Component {
     return (
       <Marker identifier={`cluster-${clusterId}`} coordinate={coordinate} onPress={onPress}>
         <View style={styles.clusterContainer}>
-          <Text style={styles.clusterText}>
-            {pointCount}
-          </Text>
+          <ImageBackground source={require('./tree.png')} style={styles.clusterImage}>
+            <Text style={styles.clusterText}>
+              {pointCount}
+            </Text>
+          </ImageBackground>
         </View>
       </Marker>
     )
