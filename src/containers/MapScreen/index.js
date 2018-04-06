@@ -8,6 +8,7 @@ import ClusteredMapView from 'react-native-maps-super-cluster'
 
 import ActionCreators from '../../actions/index'
 import getViewCoords from '../../selectors/viewCoords';
+import getTreeList from '../../selectors/treeList';
 import styles from './styles'
 
 const INIT_REGION = {
@@ -65,6 +66,12 @@ class MapScreen extends React.Component {
     }
     this.renderMarker = this.renderMarker.bind(this)
     this.renderCluster = this.renderCluster.bind(this)
+  }
+
+  async componentWillMount(){
+    await this.props.fetchTreeList();
+    console.log("yo, i fetched");
+    console.log(this.props);
   }
 
   renderCluster = (cluster, onPress) => {
@@ -125,12 +132,14 @@ MapScreen.defaultProps = {
     longitudeDelta: 0.05,
   },
   setViewCoords: () => {},
+  getTreeList: () => {},
 };
 
 MapScreen.propTypes = {
-  markers: PropTypes.array,
+  // markers: PropTypes.array,
   viewCoords: PropTypes.object,
   setViewCoords: PropTypes.func,
+  getTreeList: PropTypes.func,
 };
 
 
@@ -139,7 +148,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(store) {
-  return { viewCoords: getViewCoords(store) };
+  return { viewCoords: getViewCoords(store), markers: getTreeList(store) };
 }
 
 

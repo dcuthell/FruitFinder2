@@ -1,7 +1,7 @@
 import { Map } from 'immutable';
 
-import createReducer from '../helpers/createReducer';
-import { SET_TREE_LIST } from '../constants/actions';
+import createReducer from '../lib/helpers/createReducer';
+import { SET_TREE_LIST } from '../lib/constants/actions';
 
 
 const defaultState = Map().set('treeList', []);
@@ -9,7 +9,7 @@ const defaultState = Map().set('treeList', []);
 export default createReducer(defaultState, {
 
   [SET_TREE_LIST](state, action) {
-    return state.set('treeList', action.payload);
+    return state.set('treeList', [ ...state, action.payload ]);
   },
 
 });
