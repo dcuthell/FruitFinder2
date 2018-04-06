@@ -1,10 +1,12 @@
 import { fork, all } from 'redux-saga/effects';
 
-// import watchFetchTitle from './fetch-title';
+import watchFetchTreeList from './fetch-tree-list.js';
+
 
 
 export default function* rootSaga() {
   yield all([
+    fork(watchFetchTreeList),
   ]);
 }
 
