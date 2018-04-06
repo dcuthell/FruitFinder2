@@ -6,6 +6,7 @@ export const NAME_SET = 'NAME_SET';
 export const SET_VIEW_COORDS = 'SET_VIEW_COORDS';
 export const SET_MARKERS = 'SET_MARKERS';
 export const ADD_MARKER = 'ADD_MARKER';
+export const FETCH_TREE_LIST = 'FETCH_TREE_LIST';
 
 // errors
 export const GENERIC_ERROR = 'GENERIC_ERROR';

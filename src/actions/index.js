@@ -1,9 +1,12 @@
 
 import setViewCoords from './set-view-coords';
+import fetchTreeList from './fetch-tree-list';
 
 
 const ActionCreators = {
   setViewCoords,
+  fetchTreeList,
+  setTreeList,
 };
 
 export default ActionCreators;
