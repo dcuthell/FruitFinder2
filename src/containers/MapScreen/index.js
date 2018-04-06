@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Dimensions, Text, ImageBackground, Button } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Callout } from 'react-native-maps';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -42,7 +42,11 @@ class MapScreen extends React.Component {
           location: {
             longitude: -122.682,
             latitude: 45.512
-          }
+          },
+          type: "FCUK",
+          edible: "POITSOD",
+          condition: "TERRIBLE",
+          size: "YUGEE"
         },
         { id: 3,
           location: {
@@ -101,22 +105,29 @@ class MapScreen extends React.Component {
 
   renderMarker = (pin) => {
     return (
-      <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} image={require('../../images/tree128.png')} />
+      <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} image={require('../../images/tree128.png')}>
+        <Callout>
+          <Text>Tree type: {pin.type}</Text>
+          <Text>Fruit or Nut: {pin.edible}</Text>
+          <Text>Condition: {pin.condition}</Text>
+          <Text>Size: {pin.size}</Text>
+        </Callout>
+      </Marker>
     )
   }
 
   render() {
 
-    console.log(this.props);
+    console.log(this.props.markers.length);
     const {height, width} = Dimensions.get('window');
 
     return (
       <View style={{height: '100%', width: '100%'}}>
         <ClusteredMapView
             style={{flex: 1}}
-            data={((!this.props.markers) ? this.state.pins : this.props.markers)}
+            data={(!this.props.markers.length) ? this.state.pins : this.props.markers}
             initialRegion={INIT_REGION}
-            radius={ 90 }
+            radius={ 80 }
             renderMarker={this.renderMarker}
             renderCluster={this.renderCluster} />
         <Button

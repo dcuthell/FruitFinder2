@@ -7,7 +7,7 @@ import getTreeList from '../selectors/treeList';
 import getViewCoords from '../selectors/viewCoords';
 
 function transformData(oldTree, index) {
-  const newTree = { id: index, location: { longitude: oldTree.X, latitude: oldTree.Y } };
+  const newTree = { id: index, location: { longitude: oldTree.X, latitude: oldTree.Y }, type: oldTree.Common, edible: oldTree.Edible, condition: oldTree.Condition, size: oldTree.Size  };
   console.log(newTree)
   return newTree;
 }
