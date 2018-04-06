@@ -114,7 +114,7 @@ class MapScreen extends React.Component {
       <View style={{height: '100%', width: '100%'}}>
         <ClusteredMapView
             style={{flex: 1}}
-            data={this.state.pins}
+            data={((!this.props.markers) ? this.state.pins : this.props.markers)}
             initialRegion={INIT_REGION}
             radius={ 90 }
             renderMarker={this.renderMarker}
@@ -135,7 +135,7 @@ class MapScreen extends React.Component {
 }
 
 MapScreen.defaultProps = {
-  markers: {},
+  markers: [],
   viewCoords: {
     latitude: 45.5231,
     longitude: -132.68,
@@ -147,7 +147,7 @@ MapScreen.defaultProps = {
 };
 
 MapScreen.propTypes = {
-  markers: PropTypes.object,
+  markers: PropTypes.array,
   viewCoords: PropTypes.object,
   setViewCoords: PropTypes.func,
   getTreeList: PropTypes.func,

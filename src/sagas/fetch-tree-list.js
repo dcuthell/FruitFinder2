@@ -6,8 +6,8 @@ import setTreeList from '../actions/set-tree-list';
 import getTreeList from '../selectors/treeList';
 import getViewCoords from '../selectors/viewCoords';
 
-function transformData(oldTree) {
-  const newTree = { longitude: oldTree.X, latitude: oldTree.Y };
+function transformData(oldTree, index) {
+  const newTree = { id: index, location: { longitude: oldTree.X, latitude: oldTree.Y } };
   console.log(newTree)
   return newTree;
 }
@@ -15,7 +15,8 @@ function transformData(oldTree) {
 function* fetchTreeList() {
   try {
     const response = yield firebase.database().ref().once('value');
-    yield put(setTreeList(response._value.map(transformData)));
+    const treeArray = (response._value.map(transformData))
+    yield put(setTreeList(treeArray));
   } catch (error) {
     console.warn(error);
   }

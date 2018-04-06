@@ -4,7 +4,7 @@ import createReducer from '../lib/helpers/createReducer';
 import { SET_TREE_LIST } from '../lib/constants/actions';
 
 
-const defaultState = Map().set('treeList', {key: 6969});
+const defaultState = Map().set('treeList', []);
 
 export default createReducer(defaultState, {
 
