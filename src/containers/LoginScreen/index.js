@@ -18,7 +18,7 @@ class LoginScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-
+        <Text>Login</Text>
       </View>
     );
   }
