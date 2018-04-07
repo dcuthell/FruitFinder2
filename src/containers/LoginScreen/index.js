@@ -3,6 +3,7 @@ import { View, Dimensions, Text, TextInput, ImageBackground, Button } from 'reac
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { GoogleSigninButton } from 'react-native-google-signin';
 
 import ActionCreators from '../../actions/index'
 import styles from './styles'
@@ -25,13 +26,11 @@ class LoginScreen extends React.Component {
           placeholder="User Email"
           onChangeText={text => {this.email = text.toLowerCase();}}
         />
-        <Button
-          title={"Log In"}
-          type={'standard'}
-          onPress={() => {
-            this.props.navigation.navigate('Home');
-          }}
-        />
+        <GoogleSigninButton
+          style={{width: 256, height: 48}}
+          size={GoogleSigninButton.Size.Icon}
+          color={GoogleSigninButton.Color.Dark}
+          onPress={console.log("yay")}/>
       </View>
     );
   }

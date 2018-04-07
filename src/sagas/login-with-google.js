@@ -1,41 +1,25 @@
 import { put, takeLatest } from 'redux-saga/effects';
-import { AsyncStorage } from 'react-native';
 import firebase from 'react-native-firebase';
 import { GoogleSignIn } from 'react-native-google-signin';
 
-import { FETCH_TREE_LIST, SET_TREE_LIST } from '../lib/constants/actions';
+import { LOGIN_WITH_GOOGLE } from '../lib/constants/actions';
 import setTreeList from '../actions/set-tree-list';
 import getTreeList from '../selectors/treeList';
 import getViewCoords from '../selectors/viewCoords';
 
-function* fetchTreeList(navigator) {
+function* loginWithGoogle(navigator) {
   console.log(navigator);
   try {
-    const localTreeListJSON = yield AsyncStorage.getItem('TreeList');
-    const localTreeList = JSON.parse(localTreeListJSON);
-    if(localTreeList !== null){
-      console.log("localstorageload");
-      yield put(setTreeList(localTreeList));
-    }else{
-      try {
-        const response = yield firebase.database().ref().once('value');
-        const treeArray = (response._value.map(transformData))
-        console.log("remotestorageload");
-        try {
-          yield AsyncStorage.setItem('TreeList', JSON.stringify(treeArray));
-        }catch(error){
-          console.warn(error);
-        }
-        yield put(setTreeList(treeArray));
-      } catch (error) {
-        console.warn(error);
-      }
+    const data = yield GoogleSignIn.signIn();
+    const credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken);
+    const currentUser = yield firebase.auth().signInAndRetrieveDataWithCredential(credential);
+    console.info(JSON.stringify(currentUser.user.toJSON()));
     }
   } catch (error){
     console.warn(error);
   }
 }
 
-export default function* watchFetchTreeList() {
-  yield takeLatest(FETCH_TREE_LIST, fetchTreeList);
+export default function* watchLoginWithGoogle() {
+  yield takeLatest(LOGIN_WITH_GOOGLE, loginWithGoogle);
 }
