@@ -39,6 +39,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0a23c4daa97697118d96f2b09d1dbaf9ea943d8d">
+        <dex dex="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-base-11.8.0_a1ce10eaae741a6a7545f9513a057fa083eb9edc.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -156,6 +165,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\FruitFinder\react-native-google-signin\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b717c2decdcab90411cd6aee7a001044eb424401">
+        <dex dex="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\FruitFinder-react-native-google-signin-unspecified_9fe1e7fc5e198abc5ce231ced7d70c5b8a3cdcb4.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -207,6 +225,15 @@
         revision="23.0.1"
         sha1="f162442a19fff13995fbd51ba414d9ee05579080">
         <dex dex="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_1b65162de7a0416905701ef255800a25a5055873.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-api-phone\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe94ced585bffcf3c7f788a294cc54e6785544ac">
+        <dex dex="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-api-phone-11.8.0_6f2770624485585ddc1f56af1da831b3a9b5336e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -297,6 +324,15 @@
         revision="23.0.1"
         sha1="af61eb11ffb4296cab0c93218248a3dfcec0a84c">
         <dex dex="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.52.0_0c6eb473800baacf4c768621b033fccb20af2e13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6746a3078625563a9eb381920f34e47ccd6bab87">
+        <dex dex="C:\Users\dcuthell\Desktop\Working\FruitFinder2\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-11.8.0_37c81b9c4b5a18f0e183eee24169ed1d03c1351c.jar" />
     </item>
     <item
         is-multidex="false"

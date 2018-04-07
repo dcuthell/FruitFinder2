@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Dimensions, Text, ImageBackground, Button } from 'react-native';
+import { View, Dimensions, Text, TextInput, ImageBackground, Button } from 'react-native';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -19,13 +19,19 @@ class LoginScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Login</Text>
-          <Button
-            title={"Log In"}
-            type={'standard'}
-            onPress={() => {
-              this.props.navigation.navigate('Home');
-            }}
-          />
+        <TextInput
+          style={styles.input}
+          placeholderTextColor='white'
+          placeholder="User Email"
+          onChangeText={text => {this.email = text.toLowerCase();}}
+        />
+        <Button
+          title={"Log In"}
+          type={'standard'}
+          onPress={() => {
+            this.props.navigation.navigate('Home');
+          }}
+        />
       </View>
     );
   }
