@@ -5,6 +5,7 @@ import { TabNavigator, StackNavigator, SwitchNavigator, addNavigationHelpers } f
 import { createReduxBoundAddListener } from 'react-navigation-redux-helpers';
 import { Image } from 'react-native';
 
+import LandingScreen from './containers/LandingScreen';
 import MapScreen from './containers/MapScreen';
 import LoginScreen from './containers/LoginScreen';
 import SignupScreen from './containers/SignupScreen';
@@ -14,7 +15,7 @@ import routesNames from './lib/constants/routes';
 
 const appRoutes = {
   [routesNames.Home]: {
-    screen: MapScreen,
+    screen: LandingScreen,
   },
   [routesNames.MapScreen]: {
     screen: MapScreen,
@@ -31,7 +32,7 @@ const authRoutes = {
 }
 
 const AppStack = TabNavigator(appRoutes);
-const AuthStack = StackNavigator(authRoutes);
+const AuthStack = TabNavigator(authRoutes);
 const AppNavigator = SwitchNavigator({
     App: AppStack,
     Auth: AuthStack,

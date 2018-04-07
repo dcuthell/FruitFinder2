@@ -19,6 +19,13 @@ class SignupScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Sign Up</Text>
+          <Button
+            title={"Sign Up"}
+            type={'standard'}
+            onPress={() => {
+              this.props.navigation.navigate('Map View');
+            }}
+          />
       </View>
     );
   }

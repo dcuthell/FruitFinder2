@@ -20,12 +20,10 @@ class LoginScreen extends React.Component {
       <View style={styles.container}>
         <Text>Login</Text>
           <Button
-            title={"Hey"}
+            title={"Log In"}
             type={'standard'}
             onPress={() => {
-              this.props.navigation.navigate('Sign Up');
-              console.log(this.props);
-              console.log("heryryery");
+              this.props.navigation.navigate('Home');
             }}
           />
       </View>
