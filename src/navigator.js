@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { TabNavigator, addNavigationHelpers } from 'react-navigation';
+import { TabNavigator, StackNavigator, SwitchNavigator, addNavigationHelpers } from 'react-navigation';
 import { createReduxBoundAddListener } from 'react-navigation-redux-helpers';
 import { Image } from 'react-native';
 
@@ -12,22 +12,34 @@ import SignupScreen from './containers/SignupScreen';
 import routesNames from './lib/constants/routes';
 
 
-const routes = {
+const appRoutes = {
   [routesNames.Home]: {
     screen: MapScreen,
   },
   [routesNames.MapScreen]: {
     screen: MapScreen,
   },
-  [routesNames.Another]: {
-    screen: LoginScreen,
-  },
-  [routesNames.Another]: {
-    screen: SignupScreen,
-  }
 };
 
-const AppNavigator = TabNavigator(routes);
+const authRoutes = {
+  [routesNames.Login]: {
+    screen: LoginScreen,
+  },
+  [routesNames.Signup]: {
+    screen: SignupScreen,
+  }
+}
+
+const AppStack = TabNavigator(appRoutes);
+const AuthStack = StackNavigator(authRoutes);
+const AppNavigator = SwitchNavigator({
+    App: AppStack,
+    Auth: AuthStack,
+  },
+  {
+    initialRouteName: 'Auth',
+  }
+);
 
 const addListener = createReduxBoundAddListener("root");
 

@@ -18,7 +18,7 @@ class SignupScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Text>Login</Text>
+        <Text>Sign Up</Text>
       </View>
     );
   }
