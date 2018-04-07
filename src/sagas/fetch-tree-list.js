@@ -15,7 +15,8 @@ function transformData(oldTree, index) {
 
 function* fetchTreeList() {
   try {
-    const localTreeList = yield AsyncStorage.getItem('TreeList');
+    const localTreeListJSON = yield AsyncStorage.getItem('TreeList');
+    const localTreeList = JSON.parse(localTreeListJSON);
     if(localTreeList !== null){
       console.log("localstorageload");
       yield put(setTreeList(localTreeList));
@@ -23,6 +24,12 @@ function* fetchTreeList() {
       try {
         const response = yield firebase.database().ref().once('value');
         const treeArray = (response._value.map(transformData))
+        console.log("remotestorageload");
+        try {
+          yield AsyncStorage.setItem('TreeList', JSON.stringify(treeArray));
+        }catch(error){
+          console.warn(error);
+        }
         yield put(setTreeList(treeArray));
       } catch (error) {
         console.warn(error);
@@ -31,8 +38,6 @@ function* fetchTreeList() {
   } catch (error){
     console.warn(error);
   }
-  console.log("GOOD");
-
 }
 
 export default function* watchFetchTreeList() {
