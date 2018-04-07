@@ -14,6 +14,7 @@ function transformData(oldTree, index) {
 }
 
 function* fetchTreeList() {
+  console.log("hey");
   try {
     const localTreeListJSON = yield AsyncStorage.getItem('TreeList');
     const localTreeList = JSON.parse(localTreeListJSON);
