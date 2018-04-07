@@ -8,6 +8,7 @@ export const SET_MARKERS = 'SET_MARKERS';
 export const ADD_MARKER = 'ADD_MARKER';
 export const FETCH_TREE_LIST = 'FETCH_TREE_LIST';
 export const SET_TREE_LIST = 'SET_TREE_LIST';
+export const LOGIN_WITH_GOOGLE = 'LOGIN_WITH_GOOGLE';
 
 // errors
 export const GENERIC_ERROR = 'GENERIC_ERROR';
