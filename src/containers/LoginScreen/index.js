@@ -42,4 +42,4 @@ function mapStateToProps(store) {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(MapScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);

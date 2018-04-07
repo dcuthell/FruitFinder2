@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import ActionCreators from '../../actions/index'
 import styles from './styles'
 
-class LoginScreen extends React.Component {
+class SignupScreen extends React.Component {
 
   constructor(props){
     super(props)
@@ -18,17 +18,17 @@ class LoginScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-
+        <Text>Login</Text>
       </View>
     );
   }
 }
 
-LoginScreen.defaultProps = {
+SignupScreen.defaultProps = {
 
 };
 
-LoginScreen.propTypes = {
+SignupScreen.propTypes = {
 
 };
 
@@ -42,4 +42,4 @@ function mapStateToProps(store) {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(MapScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(SignupScreen);

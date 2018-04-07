@@ -6,6 +6,8 @@ import { createReduxBoundAddListener } from 'react-navigation-redux-helpers';
 import { Image } from 'react-native';
 
 import MapScreen from './containers/MapScreen';
+import LoginScreen from './containers/LoginScreen';
+import SignupScreen from './containers/SignupScreen';
 
 import routesNames from './lib/constants/routes';
 
@@ -18,7 +20,10 @@ const routes = {
     screen: MapScreen,
   },
   [routesNames.Another]: {
-    screen: MapScreen,
+    screen: LoginScreen,
+  },
+  [routesNames.Another]: {
+    screen: SignupScreen,
   }
 };
 
