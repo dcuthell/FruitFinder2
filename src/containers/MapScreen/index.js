@@ -72,7 +72,7 @@ class MapScreen extends React.Component {
     this.renderCluster = this.renderCluster.bind(this)
   }
 
-  componentWillMount(){
+  componentDidMount(){
     this.props.fetchTreeList();
   }
 
