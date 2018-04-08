@@ -1,6 +1,6 @@
 import { put, takeLatest } from 'redux-saga/effects';
 import { AsyncStorage } from 'react-native';
-import firebase from 'react-native-firebase';
+import firebase, { Reference } from 'react-native-firebase';
 
 import { FETCH_TREE_LIST, SET_TREE_LIST } from '../lib/constants/actions';
 import setTreeList from '../actions/set-tree-list';
@@ -9,31 +9,31 @@ import getViewCoords from '../selectors/viewCoords';
 
 function transformData(oldTree, index) {
   const newTree = { id: index, location: { longitude: oldTree.X, latitude: oldTree.Y }, type: oldTree.Common, edible: oldTree.Edible, condition: oldTree.Condition, size: oldTree.Size  };
-  console.log(newTree)
+  console.log(newTree);
   return newTree;
 }
 
-function transformData1(oldTree, index) {
-  const newTree = { id: index, location: { longitude: oldTree.X, latitude: oldTree.Y }, type: oldTree.Common, edible: oldTree.Edible, condition: oldTree.Condition, size: oldTree.Size  };
-  console.log(newTree)
-  return newTree;
+function transformData1(response) {
+  let newTreeArray = [];
+  response._childKeys.map(async (index) => {const tree = await firebase.database().ref('/trees/' + index).once('value'); newTreeArray.push(transformData(tree._value, index));});
+  return newTreeArray;
 }
 
 function* fetchTreeList() {
   console.log("fetchtreestarted");
   try {
-    console.log("async pull start");
+    console.log("local AsyncStorage pull start...");
     const localTreeListJSON = yield AsyncStorage.getItem('TreeList');
-    console.log("async pull complete");
+    console.log("...complete");
     const localTreeList = JSON.parse(localTreeListJSON);
-    const response = yield firebase.database().ref().once('value');
-    if(localTreeList !== null){
+    if(false){
       console.log("localstorageload");
       yield put(setTreeList(localTreeList));
     }else{
       try {
-        const response = yield firebase.database().ref().once('value');
-        const treeArray = (response._value.map(transformData))
+        const response = yield firebase.database().ref('/trees').once('value');
+        console.log(response);
+        const treeArray = transformData1(response);
         console.log("remotestorageload");
         try {
           yield AsyncStorage.setItem('TreeList', JSON.stringify(treeArray));
