@@ -13,6 +13,12 @@ function transformData(oldTree, index) {
   return newTree;
 }
 
+function transformData1(oldTree, index) {
+  const newTree = { id: index, location: { longitude: oldTree.X, latitude: oldTree.Y }, type: oldTree.Common, edible: oldTree.Edible, condition: oldTree.Condition, size: oldTree.Size  };
+  console.log(newTree)
+  return newTree;
+}
+
 function* fetchTreeList() {
   console.log("fetchtreestarted");
   try {
@@ -20,6 +26,7 @@ function* fetchTreeList() {
     const localTreeListJSON = yield AsyncStorage.getItem('TreeList');
     console.log("async pull complete");
     const localTreeList = JSON.parse(localTreeListJSON);
+    const response = yield firebase.database().ref().once('value');
     if(localTreeList !== null){
       console.log("localstorageload");
       yield put(setTreeList(localTreeList));
