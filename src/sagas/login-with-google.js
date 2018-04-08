@@ -20,6 +20,7 @@ function* loginWithGoogle(navigator) {
     const currentUser = yield firebase.auth().signInAndRetrieveDataWithCredential(credential);
     console.log("3");
     console.info(JSON.stringify(currentUser.user.toJSON()));
+    console.log(currentUser);
   } catch (error){
     console.warn(error);
   }

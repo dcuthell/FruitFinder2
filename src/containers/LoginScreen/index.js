@@ -27,8 +27,8 @@ class LoginScreen extends React.Component {
           onChangeText={text => {this.email = text.toLowerCase();}}
         />
         <GoogleSigninButton
-          style={{width: 256, height: 48}}
-          size={GoogleSigninButton.Size.Icon}
+          style={{width: 312, height: 48}}
+          size={GoogleSigninButton.Size.Wide}
           color={GoogleSigninButton.Color.Dark}
           onPress={() => {console.log(this.props); this.props.loginWithGoogle(this.props.navigator); console.log("done");}}/>
       </View>
