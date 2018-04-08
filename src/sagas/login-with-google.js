@@ -8,13 +8,13 @@ import getTreeList from '../selectors/treeList';
 import getViewCoords from '../selectors/viewCoords';
 
 function* loginWithGoogle(navigator) {
+  console.log("saga started");
   console.log(navigator);
   try {
     const data = yield GoogleSignIn.signIn();
     const credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken);
     const currentUser = yield firebase.auth().signInAndRetrieveDataWithCredential(credential);
     console.info(JSON.stringify(currentUser.user.toJSON()));
-    }
   } catch (error){
     console.warn(error);
   }

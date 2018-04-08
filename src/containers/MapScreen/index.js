@@ -82,15 +82,6 @@ class MapScreen extends React.Component {
           coordinate = cluster.coordinate,
           clusterId = cluster.clusterId
 
-    // use pointCount to calculate cluster size scaling
-    // and apply it to "style" prop below
-
-    // eventually get clustered points by using
-    // underlying SuperCluster instance
-    // Methods ref: https://github.com/mapbox/supercluster
-    // const clusteringEngine = this.map.getClusteringEngine(),
-    //       clusteredPoints = clusteringEngine.getLeaves(clusterId, 100)
-
     return (
       <Marker identifier={`cluster-${clusterId}`} coordinate={coordinate} onPress={onPress}>
         <View style={styles.clusterContainer}>
@@ -119,7 +110,6 @@ class MapScreen extends React.Component {
 
   render() {
 
-    console.log(this.props.markers.length);
     const {height, width} = Dimensions.get('window');
 
     return (
@@ -136,8 +126,6 @@ class MapScreen extends React.Component {
           type={'standard'}
           onPress={() => {
             this.props.fetchTreeList();
-            console.log(this.props);
-            console.log("heryryery");
           }}
         />
       </View>

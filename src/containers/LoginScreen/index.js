@@ -3,7 +3,7 @@ import { View, Dimensions, Text, TextInput, ImageBackground, Button } from 'reac
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { GoogleSigninButton } from 'react-native-google-signin';
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 
 import ActionCreators from '../../actions/index'
 import styles from './styles'
@@ -30,18 +30,18 @@ class LoginScreen extends React.Component {
           style={{width: 256, height: 48}}
           size={GoogleSigninButton.Size.Icon}
           color={GoogleSigninButton.Color.Dark}
-          onPress={console.log("yay")}/>
+          onPress={() => {console.log(this.props); this.props.loginWithGoogle(this.props.navigator); console.log("done");}}/>
       </View>
     );
   }
 }
 
 LoginScreen.defaultProps = {
-
+  loginWithGoogle: () => {},
 };
 
 LoginScreen.propTypes = {
-
+  loginWithGoogle: PropTypes.func,
 };
 
 

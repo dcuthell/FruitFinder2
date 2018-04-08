@@ -14,9 +14,11 @@ function transformData(oldTree, index) {
 }
 
 function* fetchTreeList() {
-  console.log("hey");
+  console.log("fetchtreestarted");
   try {
+    console.log("async pull start");
     const localTreeListJSON = yield AsyncStorage.getItem('TreeList');
+    console.log("async pull complete");
     const localTreeList = JSON.parse(localTreeListJSON);
     if(localTreeList !== null){
       console.log("localstorageload");
