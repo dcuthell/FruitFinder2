@@ -116,6 +116,7 @@ class MapScreen extends React.Component {
       <View style={{height: '100%', width: '100%'}}>
         <ClusteredMapView
             style={{flex: 1}}
+            showsUserLocation={true}
             data={(!this.props.markers.length) ? this.state.pins : this.props.markers}
             initialRegion={INIT_REGION}
             radius={ 48 }
