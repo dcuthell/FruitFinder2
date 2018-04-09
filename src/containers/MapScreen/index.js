@@ -118,12 +118,13 @@ class MapScreen extends React.Component {
             style={{flex: 1}}
             showsUserLocation={true}
             data={(!this.props.markers.length) ? this.state.pins : this.props.markers}
-            initialRegion={INIT_REGION}
+            initialRegion={this.props.viewCoords}
+            onRegionChangeComplete={(region) => {this.props.setViewCoords(region); console.log(this.props.viewCoords)}}
             radius={ 48 }
             renderMarker={this.renderMarker}
             renderCluster={this.renderCluster} />
         <Button
-          title={"Hey"}
+          title={"LogOut"}
           type={'standard'}
           onPress={() => {
             this.props.fetchTreeList();
@@ -137,12 +138,7 @@ class MapScreen extends React.Component {
 
 MapScreen.defaultProps = {
   markers: [],
-  viewCoords: {
-    latitude: 45.5231,
-    longitude: -132.68,
-    latitudeDelta: 0.05,
-    longitudeDelta: 0.05,
-  },
+  viewCoords: {},
   setViewCoords: () => {},
   getTreeList: () => {},
 };
