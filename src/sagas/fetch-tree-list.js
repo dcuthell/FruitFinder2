@@ -26,8 +26,6 @@ function* fetchTreeList() {
     const localTreeListJSON = yield AsyncStorage.getItem('TreeList');
     console.log("...complete");
     const localTreeList = JSON.parse(localTreeListJSON);
-    const mac = yield firebase.database().ref('/log').update({"log" : "what LOG???"});
-    console.log(mac);
     if(localTreeList !== null){
       console.log("localstorageload");
       yield put(setTreeList(localTreeList));

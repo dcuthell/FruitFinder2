@@ -96,6 +96,9 @@ class MapScreen extends React.Component {
   }
 
   renderMarker = (pin) => {
+    if(pin.id === "300069"){
+      console.log(pin.location);
+    }
     return (
       <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} image={require('../../images/tree128.png')}>
         <Callout>
@@ -103,22 +106,28 @@ class MapScreen extends React.Component {
           <Text>Fruit or Nut: {pin.edible}</Text>
           <Text>Condition: {pin.condition}</Text>
           <Text>Size: {pin.size}</Text>
+          <Text>Id: {pin.id}</Text>
         </Callout>
       </Marker>
     )
   }
 
+// {longitudeDelta: 0.0002759322523928631, latitudeDelta: 0.00026995994027601, longitude: -122.67964219674468, latitude: 45.511035447478406}
+// {longitude: -122.6796385, latitude: 45.51103467}
+
   render() {
 
     const {height, width} = Dimensions.get('window');
 
+    console.log(this.props.markers.length);
+    console.log(this.props.viewCoords);
     return (
       <View style={{height: '100%', width: '100%'}}>
         <ClusteredMapView
             style={{flex: 1}}
             showsUserLocation={true}
             data={(!this.props.markers.length) ? this.state.pins : this.props.markers}
-            initialRegion={this.props.viewCoords}
+            initialRegion={(this.props.viewCoords) ? this.props.viewCoords : INIT_REGION}
             onRegionChangeComplete={(region) => {this.props.setViewCoords(region)}}
             radius={ 48 }
             renderMarker={this.renderMarker}
@@ -127,7 +136,7 @@ class MapScreen extends React.Component {
           title={"LogOut"}
           type={'standard'}
           onPress={() => {
-            this.props.fetchTreeList();
+            this.props.addTree({ id: "300069", location: { longitude: -122.67964219674468, latitude: 45.511035447478406 }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
           }}
         />
       </View>

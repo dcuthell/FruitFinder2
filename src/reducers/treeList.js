@@ -9,12 +9,14 @@ const defaultState = Map().set('treeList', []);
 export default createReducer(defaultState, {
 
   [SET_TREE_LIST](state, action) {
+    console.log("set list");
     return state.set('treeList', action.payload);
   },
   [ADD_TO_TREE_LIST](state, action) {
-    const treeList = state.treeList.getState('treeList');
+    console.log("add list");
+    const treeList = state.get('treeList');
     treeList.push(action.payload);
-    return state.set('treeList', action.payload);
+    return state.set('treeList', treeList);
   }
 
 });
