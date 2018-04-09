@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Apr 08 17:13:05 PDT 2018
+#Sun Apr 08 19:19:34 PDT 2018
 210.set=ANDROID_RESOURCE
 282.file=C\:\\Users\\dcc3t\\Desktop\\Working\\FruitFinder2\\android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v21\\abc_screen_toolbar.xml
 14.set=ANDROID_RESOURCE
