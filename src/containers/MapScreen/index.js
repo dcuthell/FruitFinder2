@@ -119,7 +119,7 @@ class MapScreen extends React.Component {
             showsUserLocation={true}
             data={(!this.props.markers.length) ? this.state.pins : this.props.markers}
             initialRegion={this.props.viewCoords}
-            onRegionChangeComplete={(region) => {this.props.setViewCoords(region); console.log(this.props.viewCoords)}}
+            onRegionChangeComplete={(region) => {this.props.setViewCoords(region)}}
             radius={ 48 }
             renderMarker={this.renderMarker}
             renderCluster={this.renderCluster} />

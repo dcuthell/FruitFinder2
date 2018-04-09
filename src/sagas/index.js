@@ -2,14 +2,14 @@ import { fork, all } from 'redux-saga/effects';
 
 import watchFetchTreeList from './fetch-tree-list.js';
 import watchLoginWithGoogle from './login-with-google';
-
+import watchAddTree from './add-tree';
 
 
 export default function* rootSaga() {
   yield all([
     fork(watchLoginWithGoogle),
     fork(watchFetchTreeList),
-
+    fork(watchAddTree),
   ]);
 }
 

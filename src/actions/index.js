@@ -5,6 +5,7 @@ import setTreeList from './set-tree-list';
 import loginWithGoogle from './login-with-google';
 import setUserData from './set-user-data';
 import addToTreeList from './add-to-tree-list';
+import addTree from './addTree';
 
 
 const ActionCreators = {
@@ -14,6 +15,7 @@ const ActionCreators = {
   loginWithGoogle,
   setUserData,
   addToTreeList,
+  addTree,
 };
 
 export default ActionCreators;
