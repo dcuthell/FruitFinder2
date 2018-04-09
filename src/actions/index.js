@@ -3,6 +3,7 @@ import setViewCoords from './set-view-coords';
 import fetchTreeList from './fetch-tree-list';
 import setTreeList from './set-tree-list';
 import loginWithGoogle from './login-with-google';
+import setUserData from './set-user-data';
 
 
 const ActionCreators = {
@@ -10,6 +11,7 @@ const ActionCreators = {
   fetchTreeList,
   setTreeList,
   loginWithGoogle,
+  setUserData,
 };
 
 export default ActionCreators;
