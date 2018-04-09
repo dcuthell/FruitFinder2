@@ -9,13 +9,13 @@ import getViewCoords from '../selectors/viewCoords';
 
 function transformData(oldTree, index) {
   const newTree = { id: index, location: { longitude: oldTree.X, latitude: oldTree.Y }, type: oldTree.Common, edible: oldTree.Edible, condition: oldTree.Condition, size: oldTree.Size  };
-  console.log(newTree);
   return newTree;
 }
 
 function transformData1(response) {
   let newTreeArray = [];
-  response._childKeys.map(async (index) => {const tree = await firebase.database().ref('/trees/' + index).once('value'); newTreeArray.push(transformData(tree._value, index));});
+  response._childKeys.map((index) => {const tree = response._value[index]; newTreeArray.push(transformData(tree, index));});
+  console.log(newTreeArray);
   return newTreeArray;
 }
 
@@ -26,15 +26,17 @@ function* fetchTreeList() {
     const localTreeListJSON = yield AsyncStorage.getItem('TreeList');
     console.log("...complete");
     const localTreeList = JSON.parse(localTreeListJSON);
-    if(false){
+    console.log(localTreeList);
+    if(localTreeList !== null){
       console.log("localstorageload");
       yield put(setTreeList(localTreeList));
     }else{
       try {
+        console.log("remotestorageload start...");
         const response = yield firebase.database().ref('/trees').once('value');
         console.log(response);
         const treeArray = transformData1(response);
-        console.log("remotestorageload");
+        console.log("...complete");
         try {
           yield AsyncStorage.setItem('TreeList', JSON.stringify(treeArray));
         }catch(error){
