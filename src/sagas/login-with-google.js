@@ -3,24 +3,28 @@ import firebase from 'react-native-firebase';
 import { GoogleSignin } from 'react-native-google-signin';
 
 import { LOGIN_WITH_GOOGLE } from '../lib/constants/actions';
-import setTreeList from '../actions/set-tree-list';
-import getTreeList from '../selectors/treeList';
-import getViewCoords from '../selectors/viewCoords';
+import setUserData from '../actions/set-user-data';
+import getUserData from '../selectors/userData';
 
-function* loginWithGoogle(navigator) {
+function* loginWithGoogle() {
   console.log("saga started");
-  console.log(navigator);
-
   try {
+    console.log("Sign in configure...");
     yield GoogleSignin.configure();
-    console.log("1");
+    console.log("...complete");
+    console.log("Sign in data pull start...");
     const data = yield GoogleSignin.signIn();
+    console.log("...complete");
+    console.log("Firebase credential pull...");
     const credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken);
-    console.log("2");
+    console.log("...complete");
+    console.log("Firebase sign in start ...");
     const currentUser = yield firebase.auth().signInAndRetrieveDataWithCredential(credential);
-    console.log("3");
-    console.info(JSON.stringify(currentUser.user.toJSON()));
-    console.log(currentUser);
+    console.log("...complete");
+    console.log("User store save start...");
+    // const userString = JSON.stringify(currentUser.user.toJSON());
+    yield put(setUserData(currentUser));
+    console.log("...complete");
   } catch (error){
     console.warn(error);
   }

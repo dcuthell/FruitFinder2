@@ -118,7 +118,7 @@ class MapScreen extends React.Component {
             style={{flex: 1}}
             data={(!this.props.markers.length) ? this.state.pins : this.props.markers}
             initialRegion={INIT_REGION}
-            radius={ 96 }
+            radius={ 48 }
             renderMarker={this.renderMarker}
             renderCluster={this.renderCluster} />
         <Button

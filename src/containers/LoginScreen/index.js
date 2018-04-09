@@ -5,8 +5,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 
-import ActionCreators from '../../actions/index'
-import styles from './styles'
+import ActionCreators from '../../actions/index';
+import getUserData from '../../selectors/userData';
+import styles from './styles';
 
 class LoginScreen extends React.Component {
 
@@ -16,7 +17,6 @@ class LoginScreen extends React.Component {
   render() {
 
     const {height, width} = Dimensions.get('window');
-
     return (
       <View style={styles.container}>
         <Text>Login</Text>
@@ -30,7 +30,7 @@ class LoginScreen extends React.Component {
           style={{width: 312, height: 48}}
           size={GoogleSigninButton.Size.Wide}
           color={GoogleSigninButton.Color.Dark}
-          onPress={() => {console.log(this.props); this.props.loginWithGoogle(this.props.navigator); console.log("done");}}/>
+          onPress={() => {console.log(this.props); this.props.loginWithGoogle(); this.props.navigation.navigate('Home');}}/>
       </View>
     );
   }
@@ -38,10 +38,12 @@ class LoginScreen extends React.Component {
 
 LoginScreen.defaultProps = {
   loginWithGoogle: () => {},
+  userData: {},
 };
 
 LoginScreen.propTypes = {
   loginWithGoogle: PropTypes.func,
+  userData: PropTypes.object,
 };
 
 
@@ -50,7 +52,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(store) {
-  return { };
+  return { userData : getUserData(store) };
 }
 
 

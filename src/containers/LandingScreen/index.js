@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import ActionCreators from '../../actions/index'
-import styles from './styles'
+import ActionCreators from '../../actions/index';
+import getUserData from '../../selectors/userData';
+import styles from './styles';
 
 class LandingScreen extends React.Component {
 
@@ -13,23 +14,24 @@ class LandingScreen extends React.Component {
     super(props)
   }
   render() {
+    const displayName = (this.props.userData.user !== undefined) ? this.props.userData.user['_user']['displayName'] : "Default Name";
 
     const {height, width} = Dimensions.get('window');
 
     return (
       <View style={styles.container}>
-        <Text>Landing</Text>
+        <Text>{displayName}</Text>
       </View>
     );
   }
 }
 
 LandingScreen.defaultProps = {
-
+  userData: {},
 };
 
 LandingScreen.propTypes = {
-
+  userData: PropTypes.object,
 };
 
 
@@ -38,7 +40,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(store) {
-  return { };
+  return { userData : getUserData(store) };
 }
 
 
