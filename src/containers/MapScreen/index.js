@@ -70,6 +70,7 @@ class MapScreen extends React.Component {
     }
     this.renderMarker = this.renderMarker.bind(this)
     this.renderCluster = this.renderCluster.bind(this)
+    console.log("fetchfire");
     this.props.fetchTreeList();
   }
 
@@ -97,10 +98,11 @@ class MapScreen extends React.Component {
 
   renderMarker = (pin) => {
     if(pin.id === "300069"){
-      console.log(pin.location);
+      console.log("WOOOOO");
     }
+    console.log("render for :" + pin.id);
     return (
-      <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} image={require('../../images/tree128.png')}>
+      <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} >
         <Callout>
           <Text>Tree type: {pin.type}</Text>
           <Text>Fruit or Nut: {pin.edible}</Text>
@@ -118,15 +120,19 @@ class MapScreen extends React.Component {
   render() {
 
     const {height, width} = Dimensions.get('window');
+    const data = (!this.props.markers.length) ? this.state.pins : this.props.markers;
 
-    console.log(this.props.markers.length);
-    console.log(this.props.viewCoords);
+    console.log(data[data.length-1]);
+    console.log(data[data.length-2]);
+    // console.log(data[this.props.markers.length-1]);
+
+    // console.log(this.props.viewCoords);
     return (
       <View style={{height: '100%', width: '100%'}}>
         <ClusteredMapView
             style={{flex: 1}}
             showsUserLocation={true}
-            data={(!this.props.markers.length) ? this.state.pins : this.props.markers}
+            data={data}
             initialRegion={(this.props.viewCoords) ? this.props.viewCoords : INIT_REGION}
             onRegionChangeComplete={(region) => {this.props.setViewCoords(region)}}
             radius={ 48 }
@@ -136,7 +142,8 @@ class MapScreen extends React.Component {
           title={"LogOut"}
           type={'standard'}
           onPress={() => {
-            this.props.addTree({ id: "300069", location: { longitude: -122.67964219674468, latitude: 45.511035447478406 }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
+            this.props.addTree({ id: "300069", location: { longitude: -122.6796421, latitude: 45.5110354 }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
+            this.forceUpdate();
           }}
         />
       </View>

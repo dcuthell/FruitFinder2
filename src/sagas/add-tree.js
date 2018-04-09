@@ -22,7 +22,7 @@ function makeFirebaseTree(tree){
 function* addTree(action) {
   const tree = action.payload;
   yield put(addToTreeList(tree));
-  yield firebase.database().ref('/log'+`/${tree.id}`).set(makeFirebaseTree(tree));
+  yield firebase.database().ref('/trees'+`/${tree.id}`).set(makeFirebaseTree(tree));
 }
 
 export default function* watchAddTree() {

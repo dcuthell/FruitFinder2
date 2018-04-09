@@ -25,7 +25,8 @@ function* fetchTreeList() {
     console.log("local AsyncStorage pull start...");
     const localTreeListJSON = yield AsyncStorage.getItem('TreeList');
     console.log("...complete");
-    const localTreeList = JSON.parse(localTreeListJSON);
+    // const localTreeList = JSON.parse(localTreeListJSON);
+    const localTreeList = null;
     if(localTreeList !== null){
       console.log("localstorageload");
       yield put(setTreeList(localTreeList));
