@@ -134,7 +134,7 @@ class MapScreen extends React.Component {
             showsUserLocation={true}
             data={data}
             initialRegion={(this.props.viewCoords) ? this.props.viewCoords : INIT_REGION}
-            onRegionChangeComplete={(region) => {this.props.setViewCoords(region)}}
+            onRegionChangeComplete={(region) => {this.props.setViewCoords(region); console.log(this.props);}}
             radius={ 48 }
             renderMarker={this.renderMarker}
             renderCluster={this.renderCluster} />
@@ -142,7 +142,7 @@ class MapScreen extends React.Component {
           title={"LogOut"}
           type={'standard'}
           onPress={() => {
-            this.props.addTree({ id: "300069", location: { longitude: -122.6796421, latitude: 45.5110354 }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
+            this.props.addTree({ id: "300069", location: { longitude: -122.679246, latitude: 45.511596 }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
             this.forceUpdate();
           }}
         />

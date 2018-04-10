@@ -31,8 +31,14 @@ const authRoutes = {
   }
 }
 
+// const loginRoutes = {
+//
+// }
+//
+// const LoginStack = StackNavigator(loginRoutes);
 const AppStack = TabNavigator(appRoutes);
 const AuthStack = TabNavigator(authRoutes);
+
 const AppNavigator = SwitchNavigator({
     App: AppStack,
     Auth: AuthStack,
