@@ -25,7 +25,7 @@ class SignupScreen extends React.Component {
             onPress={() => {
               console.log("hey");
               this.props.signupWithEmail({email: 'mike@jones.com', password: 'mikejones', userName: 'Mike Jones'});
-              // this.props.navigation.navigate('Home');
+              this.props.navigation.navigate('Home');
             }}
           />
       </View>

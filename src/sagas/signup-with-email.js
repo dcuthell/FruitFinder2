@@ -1,5 +1,5 @@
 import { put, takeLatest } from 'redux-saga/effects';
-import firebase from 'react-native-firebase';
+import firebase, { User } from 'react-native-firebase';
 
 
 import { SIGNUP_WITH_EMAIL } from '../lib/constants/actions';
@@ -13,13 +13,20 @@ function* signupWithEmail(action) {
     const email = action.payload.email;
     const password = action.payload.password;
     const userName = action.payload.userName;
-    const createresult = yield firebase.auth().createUserAndRetrieveDataWithEmailAndPassword(email, password);
+    let currentUser = yield firebase.auth().createUserAndRetrieveDataWithEmailAndPassword(email, password);
     console.log("...complete");
-    console.log(createresult);
+    console.log(currentUser);
     console.log("Update displayname start...");
-    const currentUser = firebase.auth().currentUser;
-    yield currentUser.updateProfile({displayName: userName, photUrl: "null" })
+    yield firebase.auth().currentUser.updateProfile({displayName: userName, photUrl: "null" })
     console.log("...complete");
+    currentUser = firebase.auth().currentUser;
+    console.log(currentUser);
+    const newUserData = { userInfo : currentUser['_user'], authinfo : currentUser['_auth'] }
+    console.log(newUserData);
+    console.log("...complete");
+    console.log("User store save start...");
+    // const userString = JSON.stringify(currentUser.user.toJSON());
+    yield put(setUserData(newUserData));
   } catch (error){
     console.warn(error);
   }
