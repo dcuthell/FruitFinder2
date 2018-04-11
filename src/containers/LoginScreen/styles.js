@@ -8,7 +8,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
+  input: {
+    width: 312,
+  },
+  button: {
+    width: 312,
+    height: 48,
+  },
 });
 
 export default styles;

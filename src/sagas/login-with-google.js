@@ -21,10 +21,13 @@ function* loginWithGoogle() {
     console.log("Firebase sign in start ...");
     const currentUser = yield firebase.auth().signInAndRetrieveDataWithCredential(credential);
     console.log("...complete");
+    console.log("Userdata transform start");
+    const newUserData = { userInfo : currentUser.user['_user'], authinfo : currentUser.user['_auth'] }
+    console.log(newUserData);
+    console.log("...complete");
     console.log("User store save start...");
     // const userString = JSON.stringify(currentUser.user.toJSON());
-    yield put(setUserData(currentUser));
-    console.log("...complete");
+    yield put(setUserData(newUserData));
   } catch (error){
     console.warn(error);
   }

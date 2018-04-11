@@ -20,12 +20,34 @@ class LoginScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Login</Text>
+        <Button
+          title={"Sign In"}
+          style={styles.button}
+          type={'standard'}
+          onPress={() => {
+            this.props.navigation.navigate('Map View');
+          }}
+        />
+        <Text>OR</Text>
         <TextInput
           style={styles.input}
-          placeholderTextColor='white'
-          placeholder="User Email"
+          placeholder="Email"
           onChangeText={text => {this.email = text.toLowerCase();}}
         />
+        <TextInput
+          style={styles.input}
+          placeholder="Password"
+          onChangeText={text => {this.email = text.toLowerCase();}}
+        />
+        <Button
+          title={"Sign In With Email"}
+          style={styles.button}
+          type={'standard'}
+          onPress={() => {
+            this.props.navigation.navigate('Map View');
+          }}
+        />
+        <Text>OR</Text>
         <GoogleSigninButton
           style={{width: 312, height: 48}}
           size={GoogleSigninButton.Size.Wide}

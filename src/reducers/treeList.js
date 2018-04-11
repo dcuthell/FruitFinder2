@@ -16,7 +16,7 @@ export default createReducer(defaultState, {
     console.log("add list");
     const treeList = state.get('treeList');
     const newTreeList = [ ...treeList,
-                          action.payload];
+                          action.payload]; // Don't try to use push you IDIOT!!!! REDUX IS IMMUTABLE LIKE YOUR IGNORANCE
     return state.set('treeList', newTreeList);
   }
 
