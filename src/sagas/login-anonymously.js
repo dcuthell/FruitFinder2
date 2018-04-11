@@ -10,11 +10,11 @@ function* loginAnonymously() {
   console.log("loginanon saga started");
   try {
     console.log("Sign in start...");
-    const result = yield firebase.auth().signInAnonymously();
-    console.log(result);
+    const currentUser = yield firebase.auth().signInAnonymouslyAndRetrieveData();
     console.log("...complete");
-
-    yield put(setUserData({userInfo: {displayName: "Anonymous User"}, authinfo: null}));
+    let newUserData = { userInfo : currentUser.user['_user'], authinfo : currentUser.user['_auth'] }
+    newUserData.userInfo.displayName = "Anonmymous User";
+    yield put(setUserData(newUserData));
   } catch (error){
     console.warn(error);
   }

@@ -13,6 +13,7 @@ export const SET_USER_DATA = 'SET_USER_DATA';
 export const ADD_TO_TREE_LIST = 'ADD_TO_TREE_LIST';
 export const ADD_TREE = 'ADD_TREE';
 export const LOGIN_ANONYMOUSLY = 'LOGIN_ANONYMOUSLY';
+export const LOGIN_WITH_EMAIL = 'LOGIN_WITH_EMAIL';
 
 // errors
 export const GENERIC_ERROR = 'GENERIC_ERROR';
