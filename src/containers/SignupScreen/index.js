@@ -23,7 +23,9 @@ class SignupScreen extends React.Component {
             title={"Sign Up"}
             type={'standard'}
             onPress={() => {
-              this.props.navigation.navigate('Map View');
+              console.log("hey");
+              this.props.signupWithEmail({email: 'mike@jones.com', password: 'mikejones', userName: 'Mike Jones'});
+              // this.props.navigation.navigate('Home');
             }}
           />
       </View>
@@ -32,11 +34,11 @@ class SignupScreen extends React.Component {
 }
 
 SignupScreen.defaultProps = {
-
+  signupWithEmail: () => {},
 };
 
 SignupScreen.propTypes = {
-
+  signupWithEmail: PropTypes.func,
 };
 
 
