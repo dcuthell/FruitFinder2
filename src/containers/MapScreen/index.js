@@ -1,12 +1,14 @@
 import React from 'react';
 import { View, Dimensions, Text, ImageBackground, Button } from 'react-native';
-import MapView, { Marker, Callout } from 'react-native-maps';
+import { Marker, Callout } from 'react-native-maps';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import ClusteredMapView from 'react-native-maps-super-cluster'
+import ClusteredMapView from 'react-native-maps-super-cluster';
 
-import ActionCreators from '../../actions/index'
+import MapView from '../../components/MapView/index';
+
+import ActionCreators from '../../actions/index';
 import getViewCoords from '../../selectors/viewCoords';
 import getTreeList from '../../selectors/treeList';
 import styles from './styles'
@@ -86,7 +88,7 @@ class MapScreen extends React.Component {
     return (
       <Marker identifier={`cluster-${clusterId}`} coordinate={coordinate} onPress={onPress}>
         <View style={styles.clusterContainer}>
-          <ImageBackground source={require('../../images/tree128.png')} style={styles.clusterImage}>
+          <ImageBackground source={require('../../images/tree128.png')} style={styles.clusterImage} >
             <Text style={styles.clusterText}>
               {pointCount}
             </Text>
@@ -97,12 +99,12 @@ class MapScreen extends React.Component {
   }
 
   renderMarker = (pin) => {
-    if(pin.id === "300069"){
-      console.log("WOOOOO");
-    }
-    console.log("render for :" + pin.id);
+    // if(pin.id === "300069"){
+    //   console.log("WOOOOO");
+    // }
+    // console.log("render for :" + pin.id);
     return (
-      <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} >
+      <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} image={require('../../images/tree128.png')}>
         <Callout>
           <Text>Tree type: {pin.type}</Text>
           <Text>Fruit or Nut: {pin.edible}</Text>
@@ -122,22 +124,19 @@ class MapScreen extends React.Component {
     const {height, width} = Dimensions.get('window');
     const data = (!this.props.markers.length) ? this.state.pins : this.props.markers;
 
-    console.log(data[data.length-1]);
-    console.log(data[data.length-2]);
+    // console.log(data[data.length-1]);
+    // console.log(data[data.length-2]);
     // console.log(data[this.props.markers.length-1]);
 
     // console.log(this.props.viewCoords);
     return (
       <View style={{height: '100%', width: '100%'}}>
-        <ClusteredMapView
-            style={{flex: 1}}
+        <MapView
             showsUserLocation={true}
             data={data}
             initialRegion={(this.props.viewCoords) ? this.props.viewCoords : INIT_REGION}
             onRegionChangeComplete={(region) => {this.props.setViewCoords(region); console.log(this.props);}}
-            radius={ 48 }
-            renderMarker={this.renderMarker}
-            renderCluster={this.renderCluster} />
+            radius={ 48 } />
         <Button
           title={"LogOut"}
           type={'standard'}
