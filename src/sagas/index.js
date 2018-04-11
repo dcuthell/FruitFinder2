@@ -4,6 +4,7 @@ import watchFetchTreeList from './fetch-tree-list.js';
 import watchLoginWithGoogle from './login-with-google';
 import watchAddTree from './add-tree';
 import watchLoginAnonymously from './login-anonymously';
+import watchLoginWithEmail from './login-with-email';
 
 
 export default function* rootSaga() {
@@ -12,6 +13,7 @@ export default function* rootSaga() {
     fork(watchFetchTreeList),
     fork(watchAddTree),
     fork(watchLoginAnonymously),
+    fork(watchLoginWithEmail),
   ]);
 }
 

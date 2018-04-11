@@ -6,20 +6,27 @@ import { LOGIN_WITH_EMAIL } from '../lib/constants/actions';
 import setUserData from '../actions/set-user-data';
 import getUserData from '../selectors/userData';
 
-function* loginAnonymously() {
-  console.log("loginanon saga started");
+function* loginWithEmail(action) {
+  console.log("login with email saga started");
   try {
-    console.log("Sign in start...");
-    const result = yield firebase.auth().signInAnonymouslyAndRetrieveData();
-    console.log(result);
+    console.log("Sign up start...");
+    const email = action.payload.email;
+    const password = action.payload.password;
+    const createresult = yield firebase.auth().createUserAndRetrieveDataWithEmailAndPassword(email, password);
     console.log("...complete");
-
-    yield put(setUserData({userInfo: {displayName: "Anonymous User"}, authinfo: null}));
+    console.log(createresult);
+    console.log("Sign in start...");
+    const currentUser = yield firebase.auth().signInWithEmailAndPassword(email, password)
+    console.log("...complete");
+    console.log(currentUser);
+    let newUserData = { userInfo : currentUser.user['_user'], authinfo : currentUser.user['_auth'] }
+    newUserData.userInfo.displayName = "Validated User";
+    yield put(setUserData(newUserData));
   } catch (error){
     console.warn(error);
   }
 }
 
-export default function* watchLoginAnonymously() {
-  yield takeLatest(LOGIN_ANONYMOUSLY, loginAnonymously);
+export default function* watchLoginWithEmail() {
+  yield takeLatest(LOGIN_WITH_EMAIL, loginWithEmail);
 }

@@ -46,6 +46,7 @@ class LoginScreen extends React.Component {
           style={styles.button}
           type={'standard'}
           onPress={() => {
+            this.props.loginWithEmail({ email: 'bob@jones.com', password: 'bobjones' },);
             this.props.navigation.navigate('Map View');
           }}
         />
@@ -62,7 +63,8 @@ class LoginScreen extends React.Component {
 
 LoginScreen.defaultProps = {
   loginWithGoogle: () => {},
-  loginAnonymously: () => {console.log('fuck')},
+  loginAnonymously: () => {},
+  loginWithEmail: () => {},
   userData: {},
 };
 
