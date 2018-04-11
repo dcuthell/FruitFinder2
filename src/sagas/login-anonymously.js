@@ -10,7 +10,7 @@ function* loginAnonymously() {
   console.log("loginanon saga started");
   try {
     console.log("Sign in start...");
-    const result = yield firebase.auth.signInAnonymously();
+    const result = yield firebase.auth().signInAnonymously();
     console.log(result);
     console.log("...complete");
 
