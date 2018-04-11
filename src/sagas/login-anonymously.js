@@ -14,7 +14,7 @@ function* loginAnonymously() {
     console.log(result);
     console.log("...complete");
 
-    yield put(setUserData({userInfo: null, authinfo: null}));
+    yield put(setUserData({userInfo: {displayName: "Anonymous User"}, authinfo: null}));
   } catch (error){
     console.warn(error);
   }

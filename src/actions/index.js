@@ -6,7 +6,7 @@ import loginWithGoogle from './login-with-google';
 import setUserData from './set-user-data';
 import addToTreeList from './add-to-tree-list';
 import addTree from './add-tree';
-
+import loginAnonymously from './login-anonymously';
 
 const ActionCreators = {
   setViewCoords,
@@ -16,6 +16,7 @@ const ActionCreators = {
   setUserData,
   addToTreeList,
   addTree,
+  loginAnonymously,
 };
 
 export default ActionCreators;

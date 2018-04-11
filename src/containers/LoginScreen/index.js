@@ -21,11 +21,13 @@ class LoginScreen extends React.Component {
       <View style={styles.container}>
         <Text>Login</Text>
         <Button
-          title={"Sign In"}
+          title={"Sign In Anonymously"}
           style={styles.button}
           type={'standard'}
           onPress={() => {
-            this.props.navigation.navigate('Map View');
+            console.log
+            this.props.loginAnonymously();
+            this.props.navigation.navigate('Home');
           }}
         />
         <Text>OR</Text>
@@ -60,6 +62,7 @@ class LoginScreen extends React.Component {
 
 LoginScreen.defaultProps = {
   loginWithGoogle: () => {},
+  loginAnonymously: () => {console.log('fuck')},
   userData: {},
 };
 
