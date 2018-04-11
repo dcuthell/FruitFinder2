@@ -16,7 +16,7 @@ class LandingScreen extends React.Component {
   render() {
     // const displayName = (this.props.userData.user !== undefined) ? this.props.userData.user['_user']['displayName'] : "Default Name";
     // console
-    const displayName = (this.props.userData.userInfo !== undefined) ? this.props.userData.userInfo.displayName : "Default Name";
+    const displayName = (this.props.userData.userInfo !== null) ? this.props.userData.userInfo.displayName : "Default Name";
 
     const {height, width} = Dimensions.get('window');
 
