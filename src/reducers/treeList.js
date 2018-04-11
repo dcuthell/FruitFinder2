@@ -15,8 +15,9 @@ export default createReducer(defaultState, {
   [ADD_TO_TREE_LIST](state, action) {
     console.log("add list");
     const treeList = state.get('treeList');
-    treeList.push(action.payload);
-    return state.set('treeList', treeList);
+    const newTreeList = [ ...treeList,
+                          action.payload];
+    return state.set('treeList', newTreeList);
   }
 
 });

@@ -133,7 +133,7 @@ class MapScreen extends React.Component {
       <View style={{height: '100%', width: '100%'}}>
         <MapView
             showsUserLocation={true}
-            data={data}
+            data={this.props.markers}
             initialRegion={(this.props.viewCoords) ? this.props.viewCoords : INIT_REGION}
             onRegionChangeComplete={(region) => {this.props.setViewCoords(region); console.log(this.props);}}
             radius={ 48 } />
@@ -142,7 +142,7 @@ class MapScreen extends React.Component {
           type={'standard'}
           onPress={() => {
             this.props.addTree({ id: "300069", location: { longitude: -122.679246, latitude: 45.511596 }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
-            this.forceUpdate();
+            console.log(this.props.markers.length)
           }}
         />
       </View>

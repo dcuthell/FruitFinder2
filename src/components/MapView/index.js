@@ -54,6 +54,7 @@ class MapView extends React.Component {
   }
 
   render() {
+    console.log("render");
     return (
       <ClusteredMapView
         {...this.props}
