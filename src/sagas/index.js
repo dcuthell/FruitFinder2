@@ -3,6 +3,7 @@ import { fork, all } from 'redux-saga/effects';
 import watchFetchTreeList from './fetch-tree-list.js';
 import watchLoginWithGoogle from './login-with-google';
 import watchAddTree from './add-tree';
+import watchLoginAnonymously from './login-anonymously';
 
 
 export default function* rootSaga() {
@@ -10,6 +11,7 @@ export default function* rootSaga() {
     fork(watchLoginWithGoogle),
     fork(watchFetchTreeList),
     fork(watchAddTree),
+    fork(watchLoginAnonymously),
   ]);
 }
 
