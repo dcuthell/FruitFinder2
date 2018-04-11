@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Dimensions, Text, ImageBackground, Button } from 'react-native';
+import { View, Dimensions, Text, ImageBackground, TextInput, Button } from 'react-native';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -19,12 +19,26 @@ class SignupScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Sign Up</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="User Name"
+            onChangeText={text => {this.userName = text}}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Email"
+            onChangeText={text => {this.email = text.toLowerCase();}}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Password"
+            onChangeText={text => {this.password = text.toLowerCase();}}
+          />
           <Button
             title={"Sign Up"}
             type={'standard'}
             onPress={() => {
-              console.log("hey");
-              this.props.signupWithEmail({email: 'mike@jones.com', password: 'mikejones', userName: 'Mike Jones'});
+              this.props.signupWithEmail({email: this.email, password: this.password, userName: this.userName});
               this.props.navigation.navigate('Home');
             }}
           />

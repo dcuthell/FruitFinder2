@@ -39,15 +39,15 @@ class LoginScreen extends React.Component {
         <TextInput
           style={styles.input}
           placeholder="Password"
-          onChangeText={text => {this.email = text.toLowerCase();}}
+          onChangeText={text => {this.password = text.toLowerCase();}}
         />
         <Button
           title={"Sign In With Email"}
           style={styles.button}
           type={'standard'}
           onPress={() => {
-            this.props.loginWithEmail({ email: 'bob@jones.com', password: 'bobjones' },);
-            this.props.navigation.navigate('Map View');
+            this.props.loginWithEmail({ email: this.email, password: this.password },);
+            this.props.navigation.navigate('Home');
           }}
         />
         <Text>OR</Text>

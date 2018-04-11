@@ -8,7 +8,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
+  input: {
+    width: 312,
+  },
 });
 
 export default styles;
