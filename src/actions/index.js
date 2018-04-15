@@ -9,6 +9,7 @@ import addTree from './add-tree';
 import loginAnonymously from './login-anonymously';
 import loginWithEmail from './login-with-email';
 import signupWithEmail from './signup-with-email';
+import setAddMarker from './set-add-marker';
 
 const ActionCreators = {
   setViewCoords,
@@ -20,7 +21,8 @@ const ActionCreators = {
   addTree,
   loginAnonymously,
   loginWithEmail,
-  signupWithEmail
+  signupWithEmail,
+  setAddMarker,
 };
 
 export default ActionCreators;

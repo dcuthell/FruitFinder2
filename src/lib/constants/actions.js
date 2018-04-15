@@ -15,6 +15,7 @@ export const ADD_TREE = 'ADD_TREE';
 export const LOGIN_ANONYMOUSLY = 'LOGIN_ANONYMOUSLY';
 export const LOGIN_WITH_EMAIL = 'LOGIN_WITH_EMAIL';
 export const SIGNUP_WITH_EMAIL = 'SIGNUP_WITH_EMAIL';
+export const SET_ADD_MARKER = 'SET_ADD_MARKER';
 
 // errors
 export const GENERIC_ERROR = 'GENERIC_ERROR';
