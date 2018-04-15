@@ -141,8 +141,9 @@ class MapScreen extends React.Component {
           title={"LogOut"}
           type={'standard'}
           onPress={() => {
-            this.props.addTree({ id: "300069", location: { longitude: -122.679246, latitude: 45.511596 }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
+            // this.props.addTree({ id: "300069", location: { longitude: -122.679246, latitude: 45.511596 }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
             console.log(this.props.markers.length)
+            console.log(this.props.viewCoords)
           }}
         />
       </View>
