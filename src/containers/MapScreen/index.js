@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import ClusteredMapView from 'react-native-maps-super-cluster';
 
 import MapView from '../../components/MapView/index';
+import AddMarker from '../../components/AddMarker';
 
 import ActionCreators from '../../actions/index';
 import getViewCoords from '../../selectors/viewCoords';
@@ -129,6 +130,7 @@ class MapScreen extends React.Component {
     console.log(LatLng.latitude === undefined);
     const ok = (LatLng.latitude) ? <Marker coordinate={LatLng} /> : <Marker coordinate={LatLng} />;
     console.log(ok);
+    console.log("1");
     return (
       <View style={{height: '100%', width: '100%'}}>
         <MapView
@@ -137,6 +139,10 @@ class MapScreen extends React.Component {
             initialRegion={(this.props.viewCoords) ? this.props.viewCoords : INIT_REGION}
             onRegionChangeComplete={(region) => {this.props.setViewCoords(region); console.log(this.props);}}
             radius={ 48 }>
+            <AddMarker coordinate={{
+              longitude: -122.678,
+              latitude: 45.508
+            }}></AddMarker>
         </MapView>
         <Button
           title={"LogOut"}

@@ -26,13 +26,13 @@ class AddMarker extends React.Component {
   }
 
   render() {
+    console.log("3");
     return (
       <Marker
         draggable={true}
         onDragStart={this.dragStart}
         onDragEnd={this.dragEnd}
         { ...this.props } >
-        { ...this.children }
       </Marker>
     );
   }
