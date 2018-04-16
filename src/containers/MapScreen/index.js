@@ -141,12 +141,10 @@ class MapScreen extends React.Component {
             }}></AddMarker>
         </MapView>
         <Button
-          title={"LogOut"}
+          title={(this.props.addMarker.visibile) ? "Create Tree at Marker" : "Add Tree"}
           type={'standard'}
-          onPress={() => {
-            // this.props.addTree({ id: "300069", location: { longitude: -122.679246, latitude: 45.511596 }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
-            console.log(this.props.markers.length)
-            console.log(this.props.viewCoords)
+          onPress={(e) => {
+            (this.props.addMarker.visible) ? console.log("Tree created at " + this.props.addMarker.latitude + " " + this.props.addMarker.longitude ) : console.log("Placing tree at: " + this.props.viewCoords.latitude + " " + this.props.viewCoords.longitude )
           }}
         />
       </View>
