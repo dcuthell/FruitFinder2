@@ -20,17 +20,19 @@ class AddMarker extends React.Component {
   }
 
   dragEnd(e){
-    this.props.setAddMarker({visibility: true, latitude: e.nativeEvent.coordinate.latitude, longitude: e.nativeEvent.coordinate.longitude});
+    this.props.setAddMarker({visible: true, latitude: e.nativeEvent.coordinate.latitude, longitude: e.nativeEvent.coordinate.longitude});
   }
 
   render() {
+    console.log("111");
+    console.log(this.props.visible);
     if(this.props.visible){
       return (
         <Marker
+          { ...this.props }
           draggable={true}
           onDragStart={this.dragStart}
-          onDragEnd={this.dragEnd}
-          { ...this.props } >
+          onDragEnd={this.dragEnd} >
         </Marker>
       );
     }else{
