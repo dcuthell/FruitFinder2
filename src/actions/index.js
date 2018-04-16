@@ -10,6 +10,7 @@ import loginAnonymously from './login-anonymously';
 import loginWithEmail from './login-with-email';
 import signupWithEmail from './signup-with-email';
 import setAddMarker from './set-add-marker';
+import showAddMarker from './show-add-marker';
 
 const ActionCreators = {
   setViewCoords,
@@ -23,6 +24,7 @@ const ActionCreators = {
   loginWithEmail,
   signupWithEmail,
   setAddMarker,
+  showAddMarker,
 };
 
 export default ActionCreators;

@@ -135,16 +135,14 @@ class MapScreen extends React.Component {
             initialRegion={(this.props.viewCoords) ? this.props.viewCoords : INIT_REGION}
             onRegionChangeComplete={(region) => {this.props.setViewCoords(region); console.log(this.props);}}
             radius={ 48 }>
-            <AddMarker coordinate={{
-              longitude: -122.678,
-              latitude: 45.508
+            <AddMarker visibility={this.props.addMarker.visibility} coordinate={{ latitude: this.props.viewCoords.latitude, longitude: this.props.viewCoords.longitude
             }}></AddMarker>
         </MapView>
         <Button
           title={(this.props.addMarker.visibile) ? "Create Tree at Marker" : "Add Tree"}
           type={'standard'}
           onPress={(e) => {
-            (this.props.addMarker.visible) ? console.log("Tree created at " + this.props.addMarker.latitude + " " + this.props.addMarker.longitude ) : console.log("Placing tree at: " + this.props.viewCoords.latitude + " " + this.props.viewCoords.longitude )
+            (this.props.addMarker.visible) ? console.log("Tree created at " + this.props.addMarker.latitude + " " + this.props.addMarker.longitude) : console.log("Placing tree at: " + this.props.viewCoords.latitude + " " + this.props.viewCoords.longitude )
           }}
         />
       </View>
