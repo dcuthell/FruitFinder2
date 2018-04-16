@@ -13,20 +13,17 @@ class AddMarker extends React.Component {
 
   constructor(props) {
     super(props)
+    this.dragEnd = this.dragEnd.bind(this);
   }
 
   dragStart(e) {
-    console.log("Drag Start");
-    console.log(e.nativeEvent);
   }
 
   dragEnd(e){
-    console.log("Drag End");
-    console.log(e.nativeEvent);
+    this.props.setAddMarker({latitude: e.nativeEvent.coordinate.latitude, longitude: e.nativeEvent.coordinate.longitude});
   }
 
   render() {
-    console.log("3");
     return (
       <Marker
         draggable={true}
@@ -40,10 +37,21 @@ class AddMarker extends React.Component {
 
 AddMarker.defaultProps = {
   visibile : true,
+  setAddMarker : () => {},
 };
 
 AddMarker.propTypes = {
   visibile : PropTypes.bool,
+  setAddMarker: PropTypes.func,
 };
 
-export default AddMarker;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(ActionCreators, dispatch);
+}
+
+function mapStateToProps(store) {
+  return { };
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddMarker);
