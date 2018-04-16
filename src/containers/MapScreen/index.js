@@ -127,7 +127,7 @@ class MapScreen extends React.Component {
     const LatLng = this.props.addMarker;
     console.log(LatLng);
     console.log(LatLng.latitude === undefined);
-    const ok = (LatLng.latitude) ? <Marker coordinate={LatLng} /> : {};
+    const ok = (LatLng.latitude) ? <Marker coordinate={LatLng} /> : <Marker coordinate={LatLng} />;
     console.log(ok);
     return (
       <View style={{height: '100%', width: '100%'}}>

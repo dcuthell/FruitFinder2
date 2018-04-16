@@ -11,28 +11,39 @@ import styles from './styles';
 
 class AddMarker extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props)
   }
 
+  dragStart(e) {
+    console.log("Drag Start");
+    console.log(e.nativeEvent);
+  }
+
+  dragEnd(e){
+    console.log("Drag End");
+    console.log(e.nativeEvent);
+  }
+
   render() {
-    console.log("render");
     return (
-      <ClusteredAddMarker
-        {...this.props}
-        style={{flex: 1}}
-        renderMarker={this.renderMarker}
-        renderCluster={this.renderCluster} />
+      <Marker
+        draggable={true}
+        onDragStart={this.dragStart}
+        onDragEnd={this.dragEnd}
+        { ...this.props } >
+        { ...this.children }
+      </Marker>
     );
   }
 }
 
 AddMarker.defaultProps = {
-
+  visibile : true,
 };
 
 AddMarker.propTypes = {
-
+  visibile : PropTypes.bool,
 };
 
 export default AddMarker;
