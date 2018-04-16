@@ -11,6 +11,7 @@ import MapView from '../../components/MapView/index';
 import ActionCreators from '../../actions/index';
 import getViewCoords from '../../selectors/viewCoords';
 import getTreeList from '../../selectors/treeList';
+import getAddMarker from '../../selectors/addMarker';
 import styles from './styles'
 
 const INIT_REGION = {
@@ -123,12 +124,11 @@ class MapScreen extends React.Component {
 
     const {height, width} = Dimensions.get('window');
     const data = (!this.props.markers.length) ? this.state.pins : this.props.markers;
-
-    // console.log(data[data.length-1]);
-    // console.log(data[data.length-2]);
-    // console.log(data[this.props.markers.length-1]);
-
-    // console.log(this.props.viewCoords);
+    const LatLng = this.props.addMarker;
+    console.log(LatLng);
+    console.log(LatLng.latitude === undefined);
+    const ok = (LatLng.latitude) ? <Marker coordinate={LatLng} /> : {};
+    console.log(ok);
     return (
       <View style={{height: '100%', width: '100%'}}>
         <MapView
@@ -136,7 +136,8 @@ class MapScreen extends React.Component {
             data={this.props.markers}
             initialRegion={(this.props.viewCoords) ? this.props.viewCoords : INIT_REGION}
             onRegionChangeComplete={(region) => {this.props.setViewCoords(region); console.log(this.props);}}
-            radius={ 48 } />
+            radius={ 48 }>
+        </MapView>
         <Button
           title={"LogOut"}
           type={'standard'}
@@ -155,6 +156,7 @@ class MapScreen extends React.Component {
 MapScreen.defaultProps = {
   markers: [],
   viewCoords: {},
+  addMarker: {},
   setViewCoords: () => {},
   getTreeList: () => {},
 };
@@ -162,6 +164,7 @@ MapScreen.defaultProps = {
 MapScreen.propTypes = {
   markers: PropTypes.array,
   viewCoords: PropTypes.object,
+  addMarker: PropTypes.object,
   setViewCoords: PropTypes.func,
   getTreeList: PropTypes.func,
 };
@@ -172,7 +175,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(store) {
-  return { viewCoords: getViewCoords(store), markers: getTreeList(store) };
+  return { viewCoords: getViewCoords(store), markers: getTreeList(store), addMarker: getAddMarker(store) };
 }
 
 
