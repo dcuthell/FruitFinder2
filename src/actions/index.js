@@ -11,6 +11,7 @@ import loginWithEmail from './login-with-email';
 import signupWithEmail from './signup-with-email';
 import setAddMarker from './set-add-marker';
 import showAddMarker from './show-add-marker';
+import hideAddMarker from './hide-add-marker';
 
 const ActionCreators = {
   setViewCoords,

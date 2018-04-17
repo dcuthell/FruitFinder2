@@ -121,6 +121,13 @@ class MapScreen extends React.Component {
 // {longitudeDelta: 0.0002759322523928631, latitudeDelta: 0.00026995994027601, longitude: -122.67964219674468, latitude: 45.511035447478406}
 // {longitude: -122.6796385, latitude: 45.51103467}
 
+  addTreeMarker() {
+    console.log("props check");
+    console.log(this.props);
+    this.props.hideAddMarker();
+    this.props.addTree({ id: "300069", location: { longitude: this.props.addMarker.longitude, latitude: this.props.addMarker.latitude }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
+  }
+
   render() {
 
     const {height, width} = Dimensions.get('window');
@@ -142,7 +149,7 @@ class MapScreen extends React.Component {
           title={(this.props.addMarker.visible) ? "Create Tree at Marker" : "Add Tree"}
           type={'standard'}
           onPress={(e) => {
-            (this.props.addMarker.visible) ? console.log("Tree created at " + this.props.addMarker.latitude + " " + this.props.addMarker.longitude) : console.log("Placing tree at: " + this.props.viewCoords.latitude + " " + this.props.viewCoords.longitude ); this.props.showAddMarker();
+            (this.props.addMarker.visible) ?  this.addTreeMarker() : this.props.showAddMarker()
           }}
         />
       </View>
@@ -157,6 +164,7 @@ MapScreen.defaultProps = {
   addMarker: {},
   setViewCoords: () => {},
   showAddMarker: () => {},
+  hideAddMarker: () => {},
   getTreeList: () => {},
 };
 
@@ -166,6 +174,7 @@ MapScreen.propTypes = {
   addMarker: PropTypes.object,
   setViewCoords: PropTypes.func,
   showAddMarker: PropTypes.func,
+  hideAddMarker: PropTypes.func,
   getTreeList: PropTypes.func,
 };
 
