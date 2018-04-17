@@ -12,6 +12,9 @@ import signupWithEmail from './signup-with-email';
 import setAddMarker from './set-add-marker';
 import showAddMarker from './show-add-marker';
 import hideAddMarker from './hide-add-marker';
+import setAddTreeModal from './set-add-tree-modal';
+import showAddTreeModal from './show-add-tree-modal';
+import hideAddTreeModal from './hide-add-tree-modal';
 
 const ActionCreators = {
   setViewCoords,
@@ -27,6 +30,9 @@ const ActionCreators = {
   setAddMarker,
   showAddMarker,
   hideAddMarker,
+  setAddTreeModal,
+  showAddTreeModal,
+  hideAddTreeModal,
 };
 
 export default ActionCreators;

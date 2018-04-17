@@ -4,7 +4,9 @@ import viewCoords from './viewCoords';
 import treeList from './treeList';
 import userData from './userData';
 import addMarker from './addMarker';
-export const reducers = { viewCoords, treeList, userData, addMarker };
+import addTreeModal from './addTreeModal';
+
+export const reducers = { viewCoords, treeList, userData, addMarker, addTreeModal };
 
 export default function getRootReducer(navReducer) {
   return combineReducers({
