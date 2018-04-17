@@ -127,9 +127,10 @@ class MapScreen extends React.Component {
   addTreeMarker() {
     console.log("props check");
     console.log(this.props);
+    this.props.showAddTreeModal();
     this.props.hideAddMarker();
     // this.props.addTree({ id: "300069", location: { longitude: this.props.addMarker.longitude, latitude: this.props.addMarker.latitude }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
-    this.props.showAddTreeModal();
+
   }
 
   render() {

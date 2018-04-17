@@ -16,11 +16,14 @@ class AddTreeModal extends React.Component {
   }
 
   submitTree(){
-    this.props.addTree({ id: "300069", location: { longitude: this.props.addMarker.longitude, latitude: this.props.addMarker.latitude }, type: this.type, edible: this.edible, condition: this.condition, size: this.size});
+    const tree = { id: "300069", location: { longitude: this.props.addMarker.longitude, latitude: this.props.addMarker.latitude }, type: this.type, edible: this.edible, condition: this.condition, size: this.size};
+    console.log(tree);
+    this.props.addTree(tree);
     this.props.hideAddTreeModal();
   }
 
   render() {
+    console.log(this.props);
     if(this.props.visible){
       return (
         <View style={{height: '50%'}}>
