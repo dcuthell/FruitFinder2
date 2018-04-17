@@ -8,11 +8,14 @@ import ClusteredMapView from 'react-native-maps-super-cluster';
 
 import MapView from '../../components/MapView/index';
 import AddMarker from '../../components/AddMarker';
+import AddTreeModal from '../../components/AddTreeModal';
 
 import ActionCreators from '../../actions/index';
 import getViewCoords from '../../selectors/viewCoords';
 import getTreeList from '../../selectors/treeList';
 import getAddMarker from '../../selectors/addMarker';
+import getAddTreeModal from '../../selectors/addTreeModal';
+
 import styles from './styles'
 
 const INIT_REGION = {
@@ -125,7 +128,8 @@ class MapScreen extends React.Component {
     console.log("props check");
     console.log(this.props);
     this.props.hideAddMarker();
-    this.props.addTree({ id: "300069", location: { longitude: this.props.addMarker.longitude, latitude: this.props.addMarker.latitude }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
+    // this.props.addTree({ id: "300069", location: { longitude: this.props.addMarker.longitude, latitude: this.props.addMarker.latitude }, type: "Dingleberry", edible: "nut", condition: "sweet", size: "Y"  });
+    this.props.showAddTreeModal();
   }
 
   render() {
@@ -145,6 +149,7 @@ class MapScreen extends React.Component {
             <AddMarker visible={this.props.addMarker.visible} coordinate={{ latitude: this.props.viewCoords.latitude, longitude: this.props.viewCoords.longitude
             }}></AddMarker>
         </MapView>
+        <AddTreeModal visible={this.props.addTreeModal.visible} />
         <Button
           title={(this.props.addMarker.visible) ? "Create Tree at Marker" : "Add Tree"}
           type={'standard'}
@@ -162,9 +167,11 @@ MapScreen.defaultProps = {
   markers: [],
   viewCoords: {},
   addMarker: {},
+  addTreeModal: {},
   setViewCoords: () => {},
   showAddMarker: () => {},
   hideAddMarker: () => {},
+  showAddTreeModal: () => {},
   getTreeList: () => {},
 };
 
@@ -172,9 +179,11 @@ MapScreen.propTypes = {
   markers: PropTypes.array,
   viewCoords: PropTypes.object,
   addMarker: PropTypes.object,
+  addTreeModal: PropTypes.object,
   setViewCoords: PropTypes.func,
   showAddMarker: PropTypes.func,
   hideAddMarker: PropTypes.func,
+  showAddTreeModal: PropTypes.func,
   getTreeList: PropTypes.func,
 };
 
@@ -184,7 +193,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(store) {
-  return { viewCoords: getViewCoords(store), markers: getTreeList(store), addMarker: getAddMarker(store) };
+  return { viewCoords: getViewCoords(store), markers: getTreeList(store), addMarker: getAddMarker(store), addTreeModal: getAddTreeModal(store) };
 }
 
 

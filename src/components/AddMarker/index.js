@@ -24,8 +24,6 @@ class AddMarker extends React.Component {
   }
 
   render() {
-    console.log("111");
-    console.log(this.props.visible);
     if(this.props.visible){
       return (
         <Marker

@@ -1,3 +1,5 @@
+import { Map } from 'immutable';
+
 import createReducer from '../lib/helpers/createReducer';
 import { SET_ADD_TREE_MODAL, HIDE_ADD_TREE_MODAL, SHOW_ADD_TREE_MODAL } from '../lib/constants/actions';
 
