@@ -25,6 +25,7 @@ const ActionCreators = {
   signupWithEmail,
   setAddMarker,
   showAddMarker,
+  hideAddMarker,
 };
 
 export default ActionCreators;
