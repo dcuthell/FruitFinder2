@@ -15,6 +15,9 @@ import hideAddMarker from './hide-add-marker';
 import setAddTreeModal from './set-add-tree-modal';
 import showAddTreeModal from './show-add-tree-modal';
 import hideAddTreeModal from './hide-add-tree-modal';
+import logoutWithGoogle from './logout-with-google';
+import logoutAnonymously from './logout-anonymously';
+import logoutWithEmail from './logout-with-email';
 
 const ActionCreators = {
   setViewCoords,
@@ -33,6 +36,9 @@ const ActionCreators = {
   setAddTreeModal,
   showAddTreeModal,
   hideAddTreeModal,
+  logoutWithGoogle,
+  logoutAnonymously,
+  logoutWithEmail
 };
 
 export default ActionCreators;
