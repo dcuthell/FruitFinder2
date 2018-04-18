@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Dimensions, Modal, Text, TextInput, TouchableHighlight, ImageBackground, Button } from 'react-native';
+import { Button } from 'react-native';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -24,7 +24,6 @@ class AddTreeButton extends React.Component {
     return(
       <Button
         title={(this.props.addMarker.visible) ? "Create Tree at Marker" : "Add Tree"}
-        type={'standard'}
         onPress={(e) => {(this.props.addMarker.visible) ?  this.addTreeMarker() : this.props.showAddMarker()}} />
     );
   }

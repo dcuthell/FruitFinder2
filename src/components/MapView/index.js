@@ -1,14 +1,13 @@
 import React from 'react';
-import { View, Dimensions, Text, TextInput, ImageBackground, Button } from 'react-native';
+import { View, Text, TextInput, ImageBackground, Button } from 'react-native';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import ClusteredMapView from 'react-native-maps-super-cluster';
 import { Marker, Callout } from 'react-native-maps';
 
 import ActionCreators from '../../actions/index';
-import getUserData from '../../selectors/userData';
+
 import styles from './styles';
 
 class MapView extends React.Component {
@@ -36,10 +35,6 @@ class MapView extends React.Component {
   }
 
   renderMarker = (pin) => {
-    // if(pin.id === "300069"){
-    //   console.log("WOOOOO");
-    // }
-    // console.log("render for :" + pin.id);
     return (
       <Marker identifier={`pin-${pin.id}`} key={pin.id} coordinate={pin.location} image={require('../../images/tree128.png')}>
         <Callout>

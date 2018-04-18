@@ -50,8 +50,6 @@ class MapScreen extends React.Component {
 MapScreen.defaultProps = {
   markers: [],
   viewCoords: {},
-  addMarker: {},
-  addTreeModal: {},
   setViewCoords: () => {},
   showAddMarker: () => {},
   hideAddMarker: () => {},

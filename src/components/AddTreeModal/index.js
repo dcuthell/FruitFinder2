@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Dimensions, Modal, Text, TextInput, TouchableHighlight, ImageBackground, Button } from 'react-native';
+import { View, Modal, Text, TextInput, Button } from 'react-native';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import ActionCreators from '../../actions/index';
-import getUserData from '../../selectors/userData';
 import getAddMarker from '../../selectors/addMarker';
 import getAddTreeModal from '../../selectors/addTreeModal';
 import styles from './styles';
@@ -29,7 +28,7 @@ class AddTreeModal extends React.Component {
           animationType="slide"
           transparent={true}
           onRequestClose={() => {
-            console.log('Modal has been closed.');
+            console.log('Modal has been closed.'); //Does this need to get hooked up???
           }}
           {...this.props} >
           <View style={styles.modalView}>
@@ -74,10 +73,6 @@ class AddTreeModal extends React.Component {
 
 AddTreeModal.defaultProps = {
   visibile : true,
-  type: null,
-  edible: null,
-  condition: null,
-  size: null,
   addMarker: {},
   addTreeModal: {},
   hideAddTreeModal: () => {},
@@ -86,10 +81,6 @@ AddTreeModal.defaultProps = {
 
 AddTreeModal.propTypes = {
   visibile : PropTypes.bool,
-  type: PropTypes.string,
-  edible: PropTypes.string,
-  condition: PropTypes.string,
-  size: PropTypes.string,
   addMarker: PropTypes.object,
   addTreeModal: PropTypes.object,
   hideAddTreeModal: PropTypes.func,
