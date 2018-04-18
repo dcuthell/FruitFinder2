@@ -49,8 +49,7 @@ class MapScreen extends React.Component {
                 latitude: this.props.viewCoords.latitude,
                 longitude: this.props.viewCoords.longitude}} />
         </MapView>
-        <AddTreeModal
-          visible={this.props.addTreeModal.visible} />
+        <AddTreeModal />
         <AddTreeButton />
       </View>
     );

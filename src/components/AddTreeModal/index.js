@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import ActionCreators from '../../actions/index';
 import getUserData from '../../selectors/userData';
 import getAddMarker from '../../selectors/addMarker';
+import getAddTreeModal from '../../selectors/addTreeModal';
 import styles from './styles';
 
 class AddTreeModal extends React.Component {
@@ -17,64 +18,53 @@ class AddTreeModal extends React.Component {
 
   submitTree(){
     const tree = { id: "300069", location: { longitude: this.props.addMarker.longitude, latitude: this.props.addMarker.latitude }, type: this.type, edible: this.edible, condition: this.condition, size: this.size};
-    console.log(tree);
     this.props.addTree(tree);
     this.props.hideAddTreeModal();
   }
 
-  // shouldComponentUpdate(nextProps, nextState){
-  //   console.log(nextProps.visible);
-  //   return nextProps.visible;
-  // }
-
   render() {
-    console.log(this.props);
-    if(this.props.visible){
+    if(this.props.addTreeModal.visible){
       return (
-        <View style={{height: '50%'}}>
-          <Modal
-            animationType="slide"
-            transparent={false}
-            onRequestClose={() => {
-              console.log('Modal has been closed.');
-            }}
-            presentationStyle={'formSheet'}
-            {...this.props}
-            >
-            <View style={{flex: 1, margin: 60}}>
-              <View>
-                <Text>Hello World!</Text>
-                <TextInput
-                  style={styles.input}
-                  placeholder="Type"
-                  onChangeText={text => {this.type = text.toLowerCase();}}
-                />
-                <TextInput
-                  style={styles.input}
-                  placeholder="Edible"
-                  onChangeText={text => {this.edible = text.toLowerCase();}}
-                />
-                <TextInput
-                  style={styles.input}
-                  placeholder="Condition"
-                  onChangeText={text => {this.condition = text.toLowerCase();}}
-                />
-                <TextInput
-                  style={styles.input}
-                  placeholder="Size"
-                  onChangeText={text => {this.size = text.toUpperCase();}}
-                />
-                <Button
-                  title={"Submit Tree Report"}
-                  type={'standard'}
-                  onPress={(e) => {
-                    (this.type && this.edible && this.condition && this.size) ? this.submitTree() : console.log("not done filling out")
-                  }}
-                />
-              </View>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          onRequestClose={() => {
+            console.log('Modal has been closed.');
+          }}
+          {...this.props} >
+          <View style={styles.modalView}>
+            <View>
+              <Text>Please Enter Data For This Tree</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="Type"
+                onChangeText={text => {this.type = text.toLowerCase();}}
+              />
+              <TextInput
+                style={styles.input}
+                placeholder="Edible"
+                onChangeText={text => {this.edible = text.toLowerCase();}}
+              />
+              <TextInput
+                style={styles.input}
+                placeholder="Condition"
+                onChangeText={text => {this.condition = text.toLowerCase();}}
+              />
+              <TextInput
+                style={styles.input}
+                placeholder="Size"
+                onChangeText={text => {this.size = text.toUpperCase();}}
+              />
+              <Button
+                title={"Submit Tree Report"}
+                type={'standard'}
+                onPress={(e) => {
+                  (this.type && this.edible && this.condition && this.size) ? this.submitTree() : console.log("not done filling out")
+                }}
+              />
             </View>
-          </Modal>
-        </View>
+          </View>
+        </Modal>
       );
     }else{
       return null;
@@ -89,6 +79,7 @@ AddTreeModal.defaultProps = {
   condition: null,
   size: null,
   addMarker: {},
+  addTreeModal: {},
   hideAddTreeModal: () => {},
   addTree: () => {},
 };
@@ -100,6 +91,7 @@ AddTreeModal.propTypes = {
   condition: PropTypes.string,
   size: PropTypes.string,
   addMarker: PropTypes.object,
+  addTreeModal: PropTypes.object,
   hideAddTreeModal: PropTypes.func,
   addTree: PropTypes.func,
 };
@@ -109,7 +101,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(store) {
-  return { addMarker: getAddMarker(store) };
+  return { addMarker: getAddMarker(store), addTreeModal: getAddTreeModal(store) };
 }
 
 
