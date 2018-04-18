@@ -19,14 +19,6 @@ import getAddTreeModal from '../../selectors/addTreeModal';
 
 import styles from './styles'
 
-const INIT_REGION = {
-  latitude: 45.51,
-  longitude: -122.68,
-  latitudeDelta: .05,
-  longitudeDelta: .05
-}
-
-
 class MapScreen extends React.Component {
 
   constructor(props){
@@ -44,7 +36,6 @@ class MapScreen extends React.Component {
             onRegionChangeComplete={(region) => {this.props.setViewCoords(region)}}
             radius={ 48 }>
             <AddMarker
-              visible={this.props.addMarker.visible}
               coordinate={{
                 latitude: this.props.viewCoords.latitude,
                 longitude: this.props.viewCoords.longitude}} />

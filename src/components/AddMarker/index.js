@@ -1,12 +1,11 @@
 import React from 'react';
-import { View, Dimensions, Text, TextInput, ImageBackground, Button } from 'react-native';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Marker, Callout } from 'react-native-maps';
+import { Marker } from 'react-native-maps';
 
 import ActionCreators from '../../actions/index';
-import getUserData from '../../selectors/userData';
+import getAddMarker from '../../selectors/addMarker';
 import styles from './styles';
 
 class AddMarker extends React.Component {
@@ -24,13 +23,16 @@ class AddMarker extends React.Component {
   }
 
   render() {
-    if(this.props.visible){
+    if(this.props.addMarker.visible){
       return (
         <Marker
-          { ...this.props }
+          coordinate={{
+            longitude: this.props.addMarker.longitude,
+            latitude: this.props.addMarker.latitude}}
           draggable={true}
           onDragStart={this.dragStart}
-          onDragEnd={this.dragEnd} >
+          onDragEnd={this.dragEnd}
+          { ...this.props } >
         </Marker>
       );
     }else{
@@ -40,12 +42,12 @@ class AddMarker extends React.Component {
 }
 
 AddMarker.defaultProps = {
-  visibile : true,
+  addMarker : {},
   setAddMarker : () => {},
 };
 
 AddMarker.propTypes = {
-  visibile : PropTypes.bool,
+  addMarker: PropTypes.object,
   setAddMarker: PropTypes.func,
 };
 
@@ -54,7 +56,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(store) {
-  return { };
+  return { addMarker: getAddMarker(store) };
 }
 
 
