@@ -9,6 +9,7 @@ import ClusteredMapView from 'react-native-maps-super-cluster';
 import MapView from '../../components/MapView/index';
 import AddMarker from '../../components/AddMarker';
 import AddTreeModal from '../../components/AddTreeModal';
+import AddTreeButton from '../../components/AddTreeButton';
 
 import ActionCreators from '../../actions/index';
 import getViewCoords from '../../selectors/viewCoords';
@@ -33,14 +34,7 @@ class MapScreen extends React.Component {
     this.props.fetchTreeList();
   }
 
-  addTreeMarker() {
-    this.props.showAddTreeModal();
-    this.props.hideAddMarker();
-  }
-
   render() {
-    const {height, width} = Dimensions.get('window');
-    const data = this.props.markers;
     return (
       <View style={{height: '100%', width: '100%'}}>
         <MapView
@@ -53,20 +47,12 @@ class MapScreen extends React.Component {
               visible={this.props.addMarker.visible}
               coordinate={{
                 latitude: this.props.viewCoords.latitude,
-                longitude: this.props.viewCoords.longitude
-            }}></AddMarker>
+                longitude: this.props.viewCoords.longitude}} />
         </MapView>
         <AddTreeModal
           visible={this.props.addTreeModal.visible} />
-        <Button
-          title={(this.props.addMarker.visible) ? "Create Tree at Marker" : "Add Tree"}
-          type={'standard'}
-          onPress={(e) => {
-            (this.props.addMarker.visible) ?  this.addTreeMarker() : this.props.showAddMarker()
-          }}
-        />
+        <AddTreeButton />
       </View>
-
     );
   }
 }
