@@ -19,7 +19,7 @@ function* loginWithEmail(action) {
     const currentUser = yield firebase.auth().signInAndRetrieveDataWithEmailAndPassword(email, password)
     console.log("...complete");
     console.log(currentUser);
-    let newUserData = { userInfo : currentUser.user['_user'], authinfo : currentUser.user['_auth'] }
+    let newUserData = { userInfo : currentUser.user['_user'], authInfo : currentUser.user['_auth'] }
     (newUserData.userInfo.displayName === null) ? "Validated User" : newUserData.userInfo.displayName;
     yield put(setUserData(newUserData));
   } catch (error){

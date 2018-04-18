@@ -22,7 +22,7 @@ function* loginWithGoogle() {
     const currentUser = yield firebase.auth().signInAndRetrieveDataWithCredential(credential);
     console.log("...complete");
     console.log("Userdata transform start");
-    const newUserData = { userInfo : currentUser.user['_user'], authinfo : currentUser.user['_auth'] }
+    const newUserData = { userInfo : currentUser.user['_user'], authInfo : currentUser.user['_auth'] }
     console.log(newUserData);
     console.log("...complete");
     console.log("User store save start...");
