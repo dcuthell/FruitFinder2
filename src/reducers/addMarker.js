@@ -9,14 +9,15 @@ const defaultState = Map().set('addMarker', {visible: false, latitude: null, lon
 export default createReducer(defaultState, {
 
   [SET_ADD_MARKER](state, action) {
-    console.log("SET CALLED");
     return state.set('addMarker', action.payload);
   },
   [SHOW_ADD_MARKER](state, action) {
-    return state.set('addMarker', {visible: true, latitude: state.latitude, longitude: state.longitude});
+    const marker = state.get('addMarker');
+    return state.set('addMarker', {visible: true, latitude: marker.latitude, longitude: marker.longitude});
   },
   [HIDE_ADD_MARKER](state, action) {
-    return state.set('addMarker', {visible: false, latitude: state.latitude, longitude: state.longitude});
+    const marker = state.get('addMarker');
+    return state.set('addMarker', {visible: false, latitude: marker.latitude, longitude: marker.longitude});
   },
 
 });

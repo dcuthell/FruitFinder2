@@ -14,7 +14,7 @@ export default createReducer(defaultState, {
   },
   [ADD_TO_TREE_LIST](state, action) {
     console.log("add list");
-    const treeList = state.get('treeList');
+    const treeList = state.get('treeList'); //ALSO DONT FORGET TO DO THIS, SINCE JUST REFERNCING STATE IS REFERNCING A MAP, NOT AN OBJECT. YOU MOTHERFUCKER YOU.
     const newTreeList = [ ...treeList,
                           action.payload]; // Don't try to use push you IDIOT!!!! REDUX IS IMMUTABLE LIKE YOUR IGNORANCE
     return state.set('treeList', newTreeList);

@@ -12,10 +12,12 @@ export default createReducer(defaultState, {
     return state.set('addTreeModal', action.payload);
   },
   [SHOW_ADD_TREE_MODAL](state, action) {
-    return state.set('addTreeModal', {visible: true, type: state.type, edible: state.edible, condition: state.condition, size: state.size});
+    const modal = state.get('addTreeModal');
+    return state.set('addTreeModal', {visible: true, type: modal.type, edible: modal.edible, condition: modal.condition, size: modal.size});
   },
   [HIDE_ADD_TREE_MODAL](state, action) {
-    return state.set('addTreeModal', {visible: false, type: state.type, edible: state.edible, condition: state.condition, size: state.size});
+    const modal = state.get('addTreeModal');
+    return state.set('addTreeModal', {visible: false, type: modal.type, edible: modal.edible, condition: modal.condition, size: modal.size});
   },
 
 });

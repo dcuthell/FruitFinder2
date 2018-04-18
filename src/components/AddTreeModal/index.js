@@ -22,6 +22,11 @@ class AddTreeModal extends React.Component {
     this.props.hideAddTreeModal();
   }
 
+  // shouldComponentUpdate(nextProps, nextState){
+  //   console.log(nextProps.visible);
+  //   return nextProps.visible;
+  // }
+
   render() {
     console.log(this.props);
     if(this.props.visible){
