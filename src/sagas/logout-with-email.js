@@ -2,7 +2,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 import firebase from 'react-native-firebase';
 
 import { LOGOUT_WITH_EMAIL } from '../lib/constants/actions';
-
+import setUserData from '../actions/set-user-data';
 
 function* logoutWithEmail() {
   console.log("saga started");

@@ -12,19 +12,35 @@ class LandingScreen extends React.Component {
 
   constructor(props){
     super(props)
+
+    // this.handlePress = this.handlePress.bind(this);
+
   }
+
+  handlePress () {
+    if(this.props.userData.userInfo.isAnonymous){
+      this.props.logoutAnonymously();
+    }
+    return null;
+  }
+
   render() {
-    // const displayName = (this.props.userData.user !== undefined) ? this.props.userData.user['_user']['displayName'] : "Default Name";
-    // console
+
     const displayName = (this.props.userData.userInfo !== null) ? "Welcome, " + this.props.userData.userInfo.displayName +"!" : "Loading...";
-
-    const {height, width} = Dimensions.get('window');
-
-    return (
-      <View style={styles.container}>
-        <Text>{displayName}</Text>
-      </View>
-    );
+    if(this.props.userData.userInfo){
+      return (
+        <View style={styles.container}>
+          <Text>{displayName}</Text>
+          <Button
+            title={"Sign Out"}
+            onPress={(e) => {
+              this.handlePress();
+              console.log(this.props.userData);}} />
+        </View>
+      );
+    }else{
+      return null;
+    }
   }
 }
 

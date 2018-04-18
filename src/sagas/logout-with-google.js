@@ -3,6 +3,7 @@ import firebase from 'react-native-firebase';
 import { GoogleSignin } from 'react-native-google-signin';
 
 import { LOGOUT_WITH_GOOGLE } from '../lib/constants/actions';
+import setUserData from '../actions/set-user-data';
 
 
 function* logoutWithGoogle() {
