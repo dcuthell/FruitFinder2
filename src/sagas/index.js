@@ -6,6 +6,9 @@ import watchAddTree from './add-tree';
 import watchLoginAnonymously from './login-anonymously';
 import watchLoginWithEmail from './login-with-email';
 import watchSignupWithEmail from './signup-with-email';
+import watchLogoutWithGoogle from './logout-with-google';
+import watchLogoutAnonymously from './logout-anonymously';
+import watchLogoutWithEmail from './logout-with-email';
 
 
 export default function* rootSaga() {
@@ -16,6 +19,9 @@ export default function* rootSaga() {
     fork(watchLoginAnonymously),
     fork(watchLoginWithEmail),
     fork(watchSignupWithEmail),
+    fork(watchLogoutWithGoogle),
+    fork(watchLogoutAnonymously),
+    fork(watchLogoutWithEmail),
   ]);
 }
 
