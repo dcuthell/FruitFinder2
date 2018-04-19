@@ -32,6 +32,7 @@ class AddMarker extends React.Component {
           draggable={true}
           onDragStart={this.dragStart}
           onDragEnd={this.dragEnd}
+          pinColor={(this.props.addMarker.latitude) ? '#268702' : '#840800'}
           { ...this.props } >
         </Marker>
       );

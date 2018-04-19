@@ -20,7 +20,6 @@ class AddTreeButton extends React.Component {
     this.props.hideAddMarker();
   }
 
-  }
   render() {
     if(this.props.userData.authType === 'anonymous'){
       return null;
