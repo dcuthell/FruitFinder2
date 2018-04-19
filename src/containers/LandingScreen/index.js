@@ -20,17 +20,21 @@ class LandingScreen extends React.Component {
   handlePress () {
     if(this.props.userData.authType === 'anonymous'){
       this.props.logoutAnonymously();
-    }else if(this.props.userData.authType === 'email'){
-      this.props.logoutWithEmail();
-    }else if(this.props.userData.authType === 'google'){
-      this.props.logoutWithGoogle();
-    }else {
-      return null;
     }
+    if(this.props.userData.authType === 'email'){
+      this.props.logoutAnonymously();
+      // this.props.logoutWithEmail();
+    }
+    if(this.props.userData.authType === 'google'){
+      this.props.logoutAnonymously();
+      // this.props.logoutWithGoogle();
+    }
+    this.props.navigation.navigate('Auth');
   }
 
   render() {
 
+    console.log("Home")
     const displayName = (this.props.userData.userInfo !== null) ? "Welcome, " + this.props.userData.userInfo.displayName +"!" : "Loading...";
     if(this.props.userData.userInfo){
       return (
