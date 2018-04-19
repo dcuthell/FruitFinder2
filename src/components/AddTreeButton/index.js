@@ -20,12 +20,17 @@ class AddTreeButton extends React.Component {
     this.props.hideAddMarker();
   }
 
+  }
   render() {
-    return(
-      <Button
-        title={(this.props.addMarker.visible) ? "Create Tree at Marker" : "Add Tree"}
-        onPress={(e) => {(this.props.addMarker.visible) ?  this.addTreeMarker() : this.props.showAddMarker()}} />
-    );
+    if(this.props.userData.authType === 'anonymous'){
+      return null;
+    }else {
+      return(
+        <Button
+          title={(this.props.addMarker.visible) ? "Create Tree at Marker" : "Add Tree"}
+          onPress={(e) => {(this.props.addMarker.visible) ?  this.addTreeMarker() : this.props.showAddMarker()}} />
+      );
+    }
   }
 }
 
