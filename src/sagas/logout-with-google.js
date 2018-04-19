@@ -12,7 +12,13 @@ function* logoutWithGoogle() {
     console.log("Signin configure...");
     yield GoogleSignin.configure();
     console.log("...complete");
+  } catch (error){
+    console.warn(error);
+  }
+  try {
     console.log("Signin signout start...");
+    const nothing = yield GoogleSignin.getAccessToken();
+    console.log(nothing);
     yield GoogleSignin.signOut();
     console.log("...complete");
     console.log("Firebase logout start...");

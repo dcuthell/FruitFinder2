@@ -4,7 +4,7 @@ import createReducer from '../lib/helpers/createReducer';
 import { SET_USER_DATA } from '../lib/constants/actions';
 
 
-const defaultState = Map().set('userData', { userInfo: null, authInfo: null});
+const defaultState = Map().set('userData', { userInfo: null, authType: null});
 
 export default createReducer(defaultState, {
 

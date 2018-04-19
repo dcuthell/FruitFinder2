@@ -18,10 +18,15 @@ class LandingScreen extends React.Component {
   }
 
   handlePress () {
-    if(this.props.userData.userInfo.isAnonymous){
+    if(this.props.userData.authType === 'anonymous'){
       this.props.logoutAnonymously();
+    }else if(this.props.userData.authType === 'email'){
+      this.props.logoutWithEmail();
+    }else if(this.props.userData.authType === 'google'){
+      this.props.logoutWithGoogle();
+    }else {
+      return null;
     }
-    return null;
   }
 
   render() {
@@ -34,6 +39,7 @@ class LandingScreen extends React.Component {
           <Button
             title={"Sign Out"}
             onPress={(e) => {
+              console.log(this.props.userData);
               this.handlePress();
               console.log(this.props.userData);}} />
         </View>
